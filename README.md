@@ -16,6 +16,14 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Linting and Formatting
+
+This project uses [oxlint](https://oxc.rs/docs/guide/usage/linter.html) for fast linting and [Prettier](https://prettier.io/) for code formatting.
+
+- `bun run lint`: Run the linter
+- `bun run format`: Format the code
+- `bun run format:check`: Check for formatting issues
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
