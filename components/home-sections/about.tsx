@@ -7,7 +7,7 @@ import {
     GithubLogoIcon,
     XLogoIcon,
     LinkedinLogoIcon,
-    EnvelopeIcon,
+    EnvelopeSimpleIcon,
 } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
 import { cn } from '@/lib/utils'
@@ -16,7 +16,7 @@ import { EXPERIENCES, SOCIAL_LINKS } from '@/lib/data'
 
 export function AboutSection() {
     return (
-        <section className="w-full section-padding py-20 lg:py-24 bg-background rounded-t-[48px] border-t border-x">
+        <section id="about" className="w-full section-padding py-20 lg:py-24 bg-background rounded-t-[48px] border-t border-x">
             <div className="flex flex-col items-center gap-16">
                 {/* Section Header */}
                 <div className="flex flex-col items-center gap-8 text-center">
@@ -77,9 +77,9 @@ function ProfileCard() {
                     <Button variant="primary" animation="text">
                         Download Resume
                     </Button>
-                    <Button variant="secondary" animation="translate-small">
+                    <Button variant="secondary" animation="translate-small" href="#contact">
                         <span className="flex items-center gap-2">
-                            <EnvelopeIcon size={20} weight="duotone" />
+                            <EnvelopeSimpleIcon size={20} weight="duotone" />
                             Get in Touch
                         </span>
                     </Button>

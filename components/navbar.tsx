@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import Link from 'next/link'
-import { EnvelopeSimple } from '@phosphor-icons/react'
+import { EnvelopeSimpleIcon } from '@phosphor-icons/react'
 import { NAV_LINKS } from '@/lib/data'
 import { Button } from './button'
 import { cn } from '@/lib/utils'
@@ -60,9 +60,10 @@ export function Navbar() {
                             variant="tertiary"
                             className="px-6 py-2"
                             animation="translate-small"
+                            href="#contact"
                         >
                           <span className="flex items-center gap-2">
-                              <EnvelopeSimple
+                              <EnvelopeSimpleIcon
                                 size={20}
                                 weight="bold"
                             />
@@ -139,9 +140,10 @@ export function Navbar() {
                             variant="tertiary"
                             className="px-6"
                             animation="translate-small"
+                            href="#contact"
                         >
                           <span className="flex items-center gap-2">
-                              <EnvelopeSimple
+                              <EnvelopeSimpleIcon
                                 size={20}
                                 weight="bold"
                             />

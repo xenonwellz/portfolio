@@ -15,7 +15,7 @@ import { CORE_SKILLS, INFRA_SKILLS } from '@/lib/data'
 
 export function SkillsSection() {
     return (
-        <section className="w-full section-padding py-20 lg:py-32 bg-background rounded-t-[48px] border-t border-x">
+        <section id="skills" className="w-full section-padding py-20 lg:py-32 bg-background rounded-t-[48px] border-t border-x">
             <div className="flex flex-col gap-12">
                 {/* Header */}
                 <div className="flex flex-col items-center text-center gap-6">

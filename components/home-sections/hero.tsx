@@ -9,6 +9,8 @@ import { HERO_CONTENT } from '@/lib/data'
 import { Button } from '@/components/button'
 import { AnimatedText } from '@/components/animated-text'
 import { Badge } from '../badge'
+import Link from 'next/link'
+import { CaretDownIcon } from '@phosphor-icons/react'
 
 export function HeroSection() {
     return (
@@ -85,6 +87,30 @@ export function HeroSection() {
 
                 <div className="w-full">
                     <CodeMarquee />
+                </div>
+
+                <div className="flex justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1, duration: 0.8 }}
+                    >
+                        <Link 
+                            href="#about"
+                            className="flex flex-col items-center gap-2 group transition-opacity hover:opacity-100 opacity-60"
+                        >
+                            <motion.div
+                                animate={{ y: [0, 8, 0] }}
+                                transition={{
+                                    duration: 2,
+                                    repeat: Infinity,
+                                    ease: "easeInOut"
+                                }}
+                            >
+                                <CaretDownIcon size={24} weight="bold" />
+                            </motion.div>
+                        </Link>
+                    </motion.div>
                 </div>
             </div>
         </section>

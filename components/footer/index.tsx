@@ -3,7 +3,7 @@ import { MainFooter } from './main-footer'
 
 export function Footer() {
     return (
-        <footer>
+        <footer id="contact">
             <CTASection />
             <MainFooter />
         </footer>

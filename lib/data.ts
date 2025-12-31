@@ -1,21 +1,21 @@
 import {
-    FileJs,
-    FilePy,
-    Code,
-    Atom,
-    Hexagon,
-    Stack,
+    FileJsIcon,
+    FilePyIcon,
+    CodeIcon,
+    AtomIcon,
+    HexagonIcon,
+    StackIcon,
     FileSqlIcon,
     FishIcon,
     LeafIcon,
     AmazonLogoIcon,
-    Package,
-    GitBranch,
+    PackageIcon,
+    GitBranchIcon,
     InfinityIcon,
-    Browser,
-    Cube,
-    GitMerge,
-    UsersFour,
+    BrowserIcon,
+    CubeIcon,
+    GitMergeIcon,
+    UsersFourIcon,
     GithubLogoIcon,
     XLogoIcon,
     LinkedinLogoIcon,
@@ -146,7 +146,7 @@ export const SERVICES = [
         title: 'Full-Stack Web Development',
         description:
             'I build scalable, user-friendly applications from frontend to backend.',
-        icon: Browser,
+        icon: BrowserIcon,
         image: IMAGES.services.fullStack,
         className: 'md:col-span-1 md:row-span-2',
     },
@@ -155,7 +155,7 @@ export const SERVICES = [
         title: 'Blockchain Development',
         description:
             'Building secure and scalable decentralized applications and smart contracts.',
-        icon: Cube,
+        icon: CubeIcon,
         className: 'md:col-span-1 md:row-span-1',
     },
     {
@@ -163,7 +163,7 @@ export const SERVICES = [
         title: 'System Architecture & Integration',
         description:
             'Crafting efficient architectures that connect services, APIs, and databases seamlessly.',
-        icon: GitMerge,
+        icon: GitMergeIcon,
         className: 'md:col-span-1 md:row-span-1',
     },
     {
@@ -171,7 +171,7 @@ export const SERVICES = [
         title: 'Technical Leadership',
         description:
             'Guiding teams and projects with a balance of vision, execution, and mentorship.',
-        icon: UsersFour,
+        icon: UsersFourIcon,
         images: IMAGES.services.leadership,
         className: 'md:col-span-1 md:row-span-2',
     },
@@ -179,15 +179,15 @@ export const SERVICES = [
 
 export const CORE_SKILLS = [
     { name: 'Rust', icon: FileRsIcon },
-    { name: 'Python', icon: FilePy },
-    { name: 'Elixir', icon: Stack },
-    { name: 'Javascript', icon: FileJs },
-    { name: 'Django', icon: Code },
-    { name: 'PHP', icon: Code },
-    { name: 'React.JS', icon: Atom },
-    { name: 'Node.JS', icon: Hexagon },
-    { name: 'Next.JS', icon: Code },
-    { name: 'Typescript', icon: FileJs },
+    { name: 'Python', icon: FilePyIcon },
+    { name: 'Elixir', icon: StackIcon },
+    { name: 'Javascript', icon: FileJsIcon },
+    { name: 'Django', icon: CodeIcon },
+    { name: 'PHP', icon: CodeIcon },
+    { name: 'React.JS', icon: AtomIcon },
+    { name: 'Node.JS', icon: HexagonIcon },
+    { name: 'Next.JS', icon: CodeIcon },
+    { name: 'Typescript', icon: FileJsIcon },
 ]
 
 export const INFRA_SKILLS = [
@@ -195,9 +195,9 @@ export const INFRA_SKILLS = [
     { name: 'MySQL', icon: FishIcon },
     { name: 'MongoDB', icon: LeafIcon },
     { name: 'AWS', icon: AmazonLogoIcon },
-    { name: 'Docker', icon: Package },
+    { name: 'Docker', icon: PackageIcon },
     { name: 'CI/CD pipelines', icon: InfinityIcon },
-    { name: 'GIT', icon: GitBranch },
+    { name: 'GIT', icon: GitBranchIcon },
 ]
 
 export const REVIEWS = [
