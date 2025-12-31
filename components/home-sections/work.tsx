@@ -6,7 +6,7 @@ import { AnimatedText } from '@/components/animated-text'
 import { Button } from '@/components/button'
 import { LinkSimpleIcon } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
-import Image from 'next/image'
+import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { PROJECTS } from '@/lib/data'
 
@@ -70,6 +70,7 @@ export function WorkSection() {
 
 function WorkCard({ project }: { project: (typeof PROJECTS)[0] }) {
     const isLeft = project.side === 'left'
+    const hasDetailPage = !!project.description
 
     return (
         <motion.div
@@ -79,35 +80,54 @@ function WorkCard({ project }: { project: (typeof PROJECTS)[0] }) {
             transition={{
                 duration: 1,
                 ease: [0.215, 0.61, 0.355, 1],
-                // On small screens, we might want a different animation, but x offset is fine as long as we don't overflow
             }}
             className="bg-card rounded-3xl p-4 border border-black/5 group flex flex-col gap-4 card-shadow"
         >
-            <div className="relative rounded-lg overflow-hidden">
+            <Link
+                href={hasDetailPage ? `/work/${project.id}` : '#'}
+                className={cn(
+                    'relative rounded-lg overflow-hidden block',
+                    !hasDetailPage && 'pointer-events-none',
+                )}
+            >
                 <img
                     src={project.image}
                     alt={project.title}
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-            </div>
+            </Link>
 
             <div className="flex items-center justify-between gap-4 h-12">
                 <h3 className="text-xl lg:text-2xl font-bold tracking-tight text-black leading-tight">
                     {project.title}
                 </h3>
 
-                {project.hasButton && (
+                {hasDetailPage ? (
                     <Button
                         variant="primary"
                         animation="text"
-                        href={project.link}
+                        href={`/work/${project.id}`}
                         className="gap-2 flex py-2.5 px-6"
                     >
                         <span className="flex items-center gap-2">
                             <LinkSimpleIcon size={16} weight="bold" />
-                            View Live
+                            View Project
                         </span>
                     </Button>
+                ) : (
+                    project.hasButton && (
+                        <Button
+                            variant="primary"
+                            animation="text"
+                            href={project.link}
+                            className="gap-2 flex py-2.5 px-6"
+                        >
+                            <span className="flex items-center gap-2">
+                                <LinkSimpleIcon size={16} weight="bold" />
+                                View Live
+                            </span>
+                        </Button>
+                    )
                 )}
             </div>
         </motion.div>

@@ -49,17 +49,34 @@ export function SmoothScroll({ children }: SmoothScrollProps) {
                         // Update hash without jumping
                         window.history.replaceState(null, '', `#${id}`)
                         // Dispatch custom event for Navbar/other components to listen to
-                        window.dispatchEvent(new CustomEvent('sectionChange', { detail: id }))
+                        window.dispatchEvent(
+                            new CustomEvent('sectionChange', { detail: id }),
+                        )
                     }
                 }
             })
         }
 
-        const observer = new IntersectionObserver(handleIntersection, observerOptions)
+        const observer = new IntersectionObserver(
+            handleIntersection,
+            observerOptions,
+        )
 
         // Observe all sections with an id
         const sections = document.querySelectorAll('section[id]')
         sections.forEach((section) => observer.observe(section))
+
+        // Handle initial hash scroll
+        if (window.location.hash) {
+            const targetId = window.location.hash.slice(1)
+            const targetElement = document.getElementById(targetId)
+            if (targetElement) {
+                // Slight delay to ensure DOM is ready and Lenis is initialized
+                requestAnimationFrame(() => {
+                    lenis.scrollTo(targetElement, { offset: -100 })
+                })
+            }
+        }
 
         // Handle Anchor Links Smoothly
         const handleAnchorClick = (e: MouseEvent) => {
@@ -75,7 +92,7 @@ export function SmoothScroll({ children }: SmoothScrollProps) {
                 const targetId = link.hash.slice(1)
                 const targetElement = document.getElementById(targetId)
                 if (targetElement) {
-                    lenis.scrollTo(targetElement)
+                    lenis.scrollTo(targetElement, { offset: -100 })
                 }
             }
         }

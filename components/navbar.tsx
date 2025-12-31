@@ -8,7 +8,12 @@ import { NAV_LINKS } from '@/lib/data'
 import { Button } from './button'
 import { cn } from '@/lib/utils'
 
-export function Navbar() {
+interface NavbarProps {
+    leftElement?: React.ReactNode
+    links?: typeof NAV_LINKS
+}
+
+export function Navbar({ leftElement, links = NAV_LINKS }: NavbarProps) {
     const [isOpen, setIsOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
     const [activeSection, setActiveSection] = useState('hero')
@@ -36,6 +41,16 @@ export function Navbar() {
         }
     }, [])
 
+    const defaultLeftElement = (
+        <Link
+            href="/"
+            onClick={() => setActiveSection('hero')}
+            className="text-xl font-bold tracking-tight text-black uppercase shrink-0"
+        >
+            Obed
+        </Link>
+    )
+
     return (
         <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2.5rem)]">
             <motion.div
@@ -54,20 +69,19 @@ export function Navbar() {
             >
                 <div className="w-full">
                     <div className="flex items-center justify-between px-6 xl:pr-1.5">
-                        <Link
-                            href="/"
-                            onClick={() => setActiveSection('hero')}
-                            className="text-xl font-bold tracking-tight text-black uppercase shrink-0"
-                        >
-                            Obed
-                        </Link>
+                        {leftElement || defaultLeftElement}
+
                         {/* Desktop Menu */}
                         <div className="hidden xl:flex items-center gap-8">
                             <div className="flex items-center gap-8 mr-4">
-                                {NAV_LINKS.map((link) => (
+                                {links.map((link) => (
                                     <Link
                                         key={link.name}
-                                        href={link.href}
+                                        href={
+                                            link.href.startsWith('#')
+                                                ? `/${link.href}`
+                                                : link.href
+                                        }
                                         className={cn(
                                             'text-[15px] font-medium transition-colors',
                                             activeSection === link.href.slice(1)
@@ -83,7 +97,7 @@ export function Navbar() {
                                 variant="tertiary"
                                 className="px-6 py-2"
                                 animation="translate-small"
-                                href="#contact"
+                                href="/#contact"
                             >
                                 <span className="flex items-center gap-2">
                                     <EnvelopeSimpleIcon
@@ -151,7 +165,7 @@ export function Navbar() {
                             >
                                 <div className="px-8 pb-10 flex flex-col gap-10">
                                     <div className="flex flex-col gap-10 pt-10">
-                                        {NAV_LINKS.map((link, idx) => (
+                                        {links.map((link, idx) => (
                                             <motion.div
                                                 key={link.name}
                                                 initial={{ opacity: 0, x: -20 }}
@@ -163,7 +177,13 @@ export function Navbar() {
                                                 }}
                                             >
                                                 <Link
-                                                    href={link.href}
+                                                    href={
+                                                        link.href.startsWith(
+                                                            '#',
+                                                        )
+                                                            ? `/${link.href}`
+                                                            : link.href
+                                                    }
                                                     onClick={() =>
                                                         setIsOpen(false)
                                                     }
@@ -187,7 +207,7 @@ export function Navbar() {
                                             variant="tertiary"
                                             className="px-6"
                                             animation="translate-small"
-                                            href="#contact"
+                                            href="/#contact"
                                         >
                                             <span className="flex items-center gap-2">
                                                 <EnvelopeSimpleIcon

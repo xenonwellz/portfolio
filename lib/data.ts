@@ -101,6 +101,12 @@ export const PROJECTS = [
         link: 'https://agroease.trade',
         hasButton: true,
         side: 'left' as const,
+        description:
+            'At Agroease, I led mobile development as Deputy CTO where I built an e-commerce app with secure payments, real-time tracking, and offline reliability for farmers.',
+        problem:
+            'The agricultural system here is quite challenging, with too many middlemen which often leads to high prices, low farmer profits, and food waste. The system is often not fair and can be quite taxing on everyone involved.',
+        goal: 'The goal of Agroease is to make agriculture simple, profitable and sustainable by linking farmers and buyers directly, providing access to the right people, markets, and support systems that drive food security and economic growth.',
+        result: 'The challenges of the old agricultural system is why Agroease focused on creating a straightforward digital marketplace that directly connects farmers to buyers, helping them sell their harvest quickly and efficiently. I built a more transparent and fair system, ensuring farmers get better prices for their hard work and less food is lost along the way.',
     },
     {
         id: 'smc-dao',
@@ -109,6 +115,12 @@ export const PROJECTS = [
         link: 'https://smcdao.org',
         hasButton: true,
         side: 'right' as const,
+        description:
+            'At SMC DAO, I built a complete e-commerce platform where I developed RESTful APIs, integrated web3 payments, enhanced performance, and worked closely with the design team to deliver a secure and visually appealing for users.',
+        problem:
+            'In the crypto space, information is not easily accessible and often fragmented across spaces, there are also not many communities for people interested in the digital economy to learn and grow together.',
+        goal: 'The goal is to become the most valuable digital community in the world with a variety of products within the digital economy, providing a space where people could finally learn, connect, and grow together, with access to organized lessons, quizzes, and reliable information.',
+        result: 'SMC DAO provides a space for people to grow at ease and learn about blockchain and digital currency with incentives to motivate them.',
     },
     {
         id: 'peniwallet',
@@ -117,6 +129,12 @@ export const PROJECTS = [
         link: 'https://peniwallet.com',
         hasButton: true,
         side: 'left' as const,
+        description:
+            'Working at Peniwallet, I built and maintained the backend systems that powered our platform, using TypeScript, Node.js, and handled DevOps processes, from containerized deployments to CI/CD pipelines.',
+        problem:
+            'There are typically many challenges in the digital economy like complexity in standard crypto wallets, manual efforts, cost of performing airdrops and large payrolls. Community engagements are discouraged by these complexities.',
+        goal: 'The primary goal is being the ultimate solution for large scale token distributions and everyday crypto transactions, the most secure and user friendly wallet, and completely simplifying the crypto experience for everyone.',
+        result: 'Peniwallet provides a dynamic and community driven crypto world which is efficient and built on simplicity and speed, allowing users to enjoy gasless transactions and features which allows for tokens to be sent to numerous addresses instantly.',
     },
     {
         id: 'xcel-radiology',
@@ -125,6 +143,12 @@ export const PROJECTS = [
         link: 'https://xcelradiology.com',
         hasButton: true,
         side: 'right' as const,
+        description:
+            'I worked at Xcel Radiology where I designed and implemented microservices using Python Django and PostgreSQL, which ensured efficient and secure handling of medical data.',
+        problem:
+            'LanX is designed to help businesses launch powerful, AI-driven websites with ease. This modern SaaS and landing page template blends innovation with sleek design, offering advanced features tailored for AI startups and tech enterprises.',
+        goal: 'The primary goal of LanX is to offer businesses an intuitive and cutting-edge SaaS and landing page template, seamlessly combining advanced features with sleek design. Built for AI startups and tech enterprises.',
+        result: 'In conclusion, LanX is the ultimate solution for AI startups and tech businesses seeking a modern, professional, and feature-rich SaaS and landing page template. With its intuitive design, seamless functionality, and flexibility.',
     },
     {
         id: 'mmia',
