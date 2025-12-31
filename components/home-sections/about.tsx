@@ -16,7 +16,7 @@ import { EXPERIENCES, SOCIAL_LINKS } from '@/lib/data'
 
 export function AboutSection() {
     return (
-        <section className="w-full section-padding py-20 lg:py-24 bg-background border-x">
+        <section className="w-full section-padding py-20 lg:py-24 bg-background rounded-t-[48px] border-t border-x">
             <div className="flex flex-col items-center gap-16">
                 {/* Section Header */}
                 <div className="flex flex-col items-center gap-8 text-center">

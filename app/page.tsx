@@ -1,3 +1,4 @@
+import { HeroSection } from '@/components/home-sections/hero'
 import { AboutSection } from '@/components/home-sections/about'
 import { SkillsSection } from '@/components/home-sections/skills'
 import { WorkSection } from '@/components/home-sections/work'
@@ -9,6 +10,7 @@ import { Footer } from '@/components/footer'
 export default function Home() {
     return (
         <div className="flex flex-col font-sans">
+            <HeroSection />
             <AboutSection />
             <SkillsSection />
             <WorkSection />

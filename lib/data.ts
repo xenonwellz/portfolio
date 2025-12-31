@@ -22,6 +22,12 @@ import {
     FileRsIcon,
 } from '@phosphor-icons/react'
 
+export const HERO_CONTENT = {
+    title: 'Obed Ovabor',
+    subtitle: 'Building the future of software, one line at a time.',
+    description: 'Expert in Blockchain & Fullstack Development.',
+}
+
 export const NAV_LINKS = [
     { name: 'Skills', href: '#skills' },
     { name: 'My Work', href: '#work' },
