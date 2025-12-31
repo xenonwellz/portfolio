@@ -4,9 +4,11 @@ import React from 'react'
 import { motion } from 'motion/react'
 import { ShootingStars } from '@/components/hero-sections/shooting-stars'
 import { LightRays } from '@/components/hero-sections/light-rays'
+import { CodeMarquee } from '@/components/hero-sections/code-marquee'
 import { HERO_CONTENT } from '@/lib/data'
 import { Button } from '@/components/button'
 import { AnimatedText } from '@/components/animated-text'
+import { Badge } from '../badge'
 
 export function HeroSection() {
     return (
@@ -20,6 +22,9 @@ export function HeroSection() {
             </div>
 
             <div className="relative z-10 w-full flex flex-col gap-8 md:gap-12">
+                <div>
+                    <Badge dot>Software Engineer</Badge>
+                </div>
                 <div className="flex flex-col gap-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -77,6 +82,10 @@ export function HeroSection() {
                         More About Me
                     </Button>
                 </motion.div>
+
+                <div className="w-full">
+                    <CodeMarquee />
+                </div>
             </div>
         </section>
     )

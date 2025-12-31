@@ -4,7 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 // User provided CSS properties for Rays
-// const RAY_ROTATIONS = [-18, -5, -11, 25, 0] 
+// const RAY_ROTATIONS = [-18, -5, -11, 25, 0]
 const RAY_ROTATIONS = [6, 18, -3, -24, -12, -18, -5, -11, 25, 0]
 
 // Individual Ray Components with optional animation

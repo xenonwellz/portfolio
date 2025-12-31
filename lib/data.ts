@@ -25,7 +25,8 @@ import {
 export const HERO_CONTENT = {
     title: 'Obed Ovabor',
     subtitle: 'Building the future of software, one line at a time.',
-    description: 'Expert in Blockchain & Fullstack Development.',
+    description:
+        'Crafting high-performance architectures and decentralized systems using Rust, TS/JS, Python, and Elixir.',
 }
 
 export const NAV_LINKS = [
