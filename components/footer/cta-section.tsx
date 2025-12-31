@@ -8,8 +8,7 @@ import { AnimatedText } from '@/components/animated-text'
 export function CTASection() {
     return (
         <section className="w-full section-padding z-10 relative bg-background-secondary rounded-[48px] border-t border-x py-10">
-            <div>
-                <div className="overflow-hidden">
+              <div>
                     <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
                         <div className="flex flex-col gap-8">
                             <div className="flex flex-col gap-6">
@@ -63,7 +62,7 @@ export function CTASection() {
                             </motion.div>
                         </div>
 
-                        <div className="relative overflow-hidden rounded-3xl bg-white p-5 shadow-xl aspect-5/3 max-w-[720px]">
+                        <div className="relative rounded-3xl bg-white p-5 shadow-xl aspect-5/3 max-w-[720px]">
                             <div className="relative h-full w-full overflow-hidden rounded-sm">
                                 <img
                                     src="/images/dev-screen.jpeg"
@@ -74,7 +73,6 @@ export function CTASection() {
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
     )
 }

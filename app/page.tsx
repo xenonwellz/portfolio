@@ -1,6 +1,7 @@
 import { Button } from '@/components/button'
 import { Footer } from '@/components/footer'
 import { TestimonialsSection } from '@/components/home-sections/testimonials'
+import { ServicesSection } from '@/components/home-sections/services'
 import { WhyHireMeSection } from '@/components/home-sections/why-hire-me'
 
 export default function Home() {
@@ -45,6 +46,7 @@ export default function Home() {
                 </h1>
             </div>
 
+            <ServicesSection />
             <WhyHireMeSection />
             <TestimonialsSection />
 
