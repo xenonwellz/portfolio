@@ -4,40 +4,15 @@ import React from 'react'
 import { Badge } from '@/components/badge'
 import { Button } from '@/components/button'
 import {
-    GithubLogo,
-    XLogo,
-    LinkedinLogo,
+    GithubLogoIcon,
+    XLogoIcon,
+    LinkedinLogoIcon,
     EnvelopeIcon,
 } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
 import { cn } from '@/lib/utils'
-
-const EXPERIENCES = [
-    {
-        company: 'Xenrad',
-        role: 'Founder',
-        duration: 'Present',
-        logo: '/images/experience/xenrad.png',
-    },
-    {
-        company: 'Agroease Limited',
-        role: 'Deputy CTO',
-        duration: '2024',
-        logo: '/images/experience/agroease.png',
-    },
-    {
-        company: 'Blockchain FUL',
-        role: 'Blockchain Developer',
-        duration: '2023',
-        logo: '/images/experience/bful.png',
-    },
-    {
-        company: 'Flyte Tech',
-        role: 'Fullstack Engineer',
-        duration: '2022',
-        logo: '/images/experience/flyte.png',
-    },
-]
+import Link from 'next/link'
+import { EXPERIENCES, SOCIAL_LINKS } from '@/lib/data'
 
 export function AboutSection() {
     return (
@@ -130,25 +105,28 @@ function ProfileCard() {
 function SocialLinks() {
     return (
         <div className="flex items-center gap-8">
-            <SocialLink icon={GithubLogo} href="https://github.com" />
-            <div className="w-px h-6 bg-black/10" />
-            <SocialLink icon={XLogo} href="https://x.com" />
-            <div className="w-px h-6 bg-black/10" />
-            <SocialLink icon={LinkedinLogo} href="https://linkedin.com" />
+            {SOCIAL_LINKS.map((link, index) => (
+                <React.Fragment key={link.name}>
+                    <SocialLink icon={link.icon} href={link.href} />
+                    {index < SOCIAL_LINKS.length - 1 && (
+                        <div className="w-px h-6 bg-black/10" />
+                    )}
+                </React.Fragment>
+            ))}
         </div>
     )
 }
 
 function SocialLink({ icon: Icon, href }: { icon: any; href: string }) {
     return (
-        <a
+        <Link
             href={href}
             target="_blank"
             rel="noopener noreferrer"
             className="text-black hover:opacity-70 transition-opacity"
         >
             <Icon size={22} />
-        </a>
+        </Link>
     )
 }
 

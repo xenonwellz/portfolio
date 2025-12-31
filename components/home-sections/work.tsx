@@ -8,53 +8,7 @@ import { LinkSimpleIcon } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
-
-const PROJECTS = [
-    {
-        id: 'agroease',
-        title: 'Agroease',
-        image: '/images/projects/agroease.avif',
-        link: 'https://agroease.trade',
-        hasButton: true,
-        side: 'left' as const,
-    },
-    {
-        id: 'smc-dao',
-        title: 'SMC DAO',
-        image: '/images/projects/smc-dao.avif',
-        link: 'https://smcdao.org',
-        hasButton: true,
-        side: 'right' as const,
-    },
-    {
-        id: 'peniwallet',
-        title: 'Peniwallet',
-        image: '/images/projects/peniwallet.avif',
-        link: 'https://peniwallet.com',
-        hasButton: true,
-        side: 'left' as const,
-    },
-    {
-        id: 'xcel-radiology',
-        title: 'Xcel Radiology',
-        image: '/images/projects/xcelrad.avif',
-        link: 'https://xcelradiology.com',
-        hasButton: true,
-        side: 'right' as const,
-    },
-    {
-        id: 'mmia',
-        title: 'MMIA staff access control system',
-        image: '/images/projects/faan.avif',
-        side: 'left' as const,
-    },
-    {
-        id: 'flyte',
-        title: 'Flyte Technologies',
-        image: '/images/projects/misas.avif',
-        side: 'right' as const,
-    },
-]
+import { PROJECTS } from '@/lib/data'
 
 export function WorkSection() {
     return (

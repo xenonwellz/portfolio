@@ -4,52 +4,11 @@ import React from 'react'
 import { Badge } from '@/components/badge'
 import { AnimatedText } from '@/components/animated-text'
 import { Button } from '@/components/button'
-import { Browser, Cube, GitMerge, UsersFour } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
 import Image from 'next/image'
 import { InfiniteCarousel } from '@/components/infinite-carousel'
 import { cn } from '@/lib/utils'
-
-const SERVICES = [
-    {
-        id: 'full-stack',
-        title: 'Full-Stack Web Development',
-        description:
-            'I build scalable, user-friendly applications from frontend to backend.',
-        icon: Browser,
-        image: '/images/full-stack.png',
-        className: 'md:col-span-1 md:row-span-2',
-    },
-    {
-        id: 'blockchain',
-        title: 'Blockchain Development',
-        description:
-            'Building secure and scalable decentralized applications and smart contracts.',
-        icon: Cube,
-        className: 'md:col-span-1 md:row-span-1',
-    },
-    {
-        id: 'system-architecture',
-        title: 'System Architecture & Integration',
-        description:
-            'Crafting efficient architectures that connect services, APIs, and databases seamlessly.',
-        icon: GitMerge,
-        className: 'md:col-span-1 md:row-span-1',
-    },
-    {
-        id: 'technical-leadership',
-        title: 'Technical Leadership',
-        description:
-            'Guiding teams and projects with a balance of vision, execution, and mentorship.',
-        icon: UsersFour,
-        images: [
-            '/images/leadership-1.png',
-            '/images/leadership-2.png',
-            '/images/leadership-3.png',
-        ],
-        className: 'md:col-span-1 md:row-span-2',
-    },
-]
+import { SERVICES } from '@/lib/data'
 
 export function ServicesSection() {
     return (
@@ -137,9 +96,9 @@ function ServiceCard({
                     </p>
                 </div>
 
-                {service.image || service.images ? (
+                {'image' in service || 'images' in service ? (
                     <div className="mt-auto pt-4 relative">
-                        {service.image && (
+                        {'image' in service && service.image && (
                             <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-lg border border-black/5 ring-1 ring-black/5">
                                 <Image
                                     src={service.image}
@@ -150,7 +109,7 @@ function ServiceCard({
                             </div>
                         )}
 
-                        {service.images && (
+                        {'images' in service && service.images && (
                             <div className="w-full">
                                 <InfiniteCarousel images={service.images} />
                             </div>

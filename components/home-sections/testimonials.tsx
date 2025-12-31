@@ -4,21 +4,7 @@ import { Button } from '@/components/button'
 import { Badge } from '@/components/badge'
 import { Review } from '@/components/review'
 import { AnimatedText } from '@/components/animated-text'
-
-const REVIEWS = [
-    {
-        quote: 'Working with Obed was a remarkable experience. His innovative thinking and brilliance brought about a user-friendly and and reliable wallet to life. I was really impressed by his professionalism and dedication to building something that makes crypto simpler for everybody .',
-    },
-    {
-        quote: "Obed's vision and commitment to community-driven innovation was what really stood out for me. He built something impactful that would definitely stand the test of time and setting a strong standard in the digital economy.",
-    },
-    {
-        quote: 'His work with Agroease did not only combine innovation and reliability, but also creativity, genuine purpose and a deep understanding of agricultural needs. Obed built Agroease to not just be an app but a smart solution that empowers farmers and connect communities.',
-    },
-    {
-        quote: 'Working with Obed was such an exceptional experience. His technical expertise and problem-solving skills elevated every project he worked on. He delivered efficient and reliable solutions that strengthened our systems and improved overall performance.',
-    },
-]
+import { REVIEWS } from '@/lib/data'
 
 export function TestimonialsSection() {
     return (
@@ -50,6 +36,7 @@ export function TestimonialsSection() {
                                         variant="secondary"
                                         animation="translate-small"
                                         className="h-14 px-8 text-base"
+                                        href="#work"
                                     >
                                         See My Work
                                     </Button>
@@ -57,6 +44,7 @@ export function TestimonialsSection() {
                                         variant="primary"
                                         animation="translate-small"
                                         className="h-14 px-8 text-base"
+                                        href="#contact"
                                     >
                                         Get In Touch
                                     </Button>

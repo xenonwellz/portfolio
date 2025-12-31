@@ -2,12 +2,8 @@
 
 import { motion, useScroll, useTransform } from 'motion/react'
 import { useRef } from 'react'
-import {
-    XLogoIcon,
-    LinkedinLogoIcon,
-    GithubLogoIcon,
-} from '@phosphor-icons/react'
 import Link from 'next/link'
+import { SOCIAL_LINKS, NAV_LINKS } from '@/lib/data'
 
 export function MainFooter() {
     const containerRef = useRef<HTMLElement>(null)
@@ -31,11 +27,7 @@ export function MainFooter() {
                             OBED
                         </h3>
                         <div className="flex gap-4">
-                            {[
-                                { Icon: XLogoIcon, href: '#' },
-                                { Icon: LinkedinLogoIcon, href: '#' },
-                                { Icon: GithubLogoIcon, href: '#' },
-                            ].map(({ Icon, href }, i) => (
+                            {SOCIAL_LINKS.map(({ icon: Icon, href }, i) => (
                                 <Link
                                     key={i}
                                     href={href}
@@ -48,24 +40,15 @@ export function MainFooter() {
                     </div>
 
                     <div className="flex flex-wrap gap-8 font-medium h-8 items-center text-black/60">
-                        <Link
-                            href="#"
-                            className="transition-colors duration-500 hover:text-black"
-                        >
-                            Skills
-                        </Link>
-                        <Link
-                            href="#"
-                            className="transition-colors duration-500 hover:text-black"
-                        >
-                            My Work
-                        </Link>
-                        <Link
-                            href="#"
-                            className="transition-colors duration-500 hover:text-black"
-                        >
-                            About
-                        </Link>
+                        {NAV_LINKS.map((link) => (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                className="transition-colors duration-500 hover:text-black"
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
                     </div>
 
                     <div className="flex font-medium h-8 items-center text-black/60">

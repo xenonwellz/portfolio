@@ -6,29 +6,7 @@ import { AnimatedText } from '@/components/animated-text'
 import { CheckIcon } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
 import { cn } from '@/lib/utils'
-
-const FEATURES = [
-    {
-        title: 'Versatile Engineer',
-        description:
-            'Proficient across blockchain, backend, and frontend stacks — delivering end-to-end solutions.',
-    },
-    {
-        title: 'Future-Ready Solutions',
-        description:
-            'I build scalable, modern systems using tools like Rust, Elixir, and cloud-first architectures.',
-    },
-    {
-        title: 'Problem-Solving Mindset',
-        description:
-            'I focus on solving real problems, choosing the right tool for the job every time.',
-    },
-    {
-        title: 'Collaborative Leadership',
-        description:
-            'Experience as a Founder and Deputy CTO means I align tech execution with business goals.',
-    },
-]
+import { FEATURES } from '@/lib/data'
 
 export function WhyHireMeSection() {
     return (

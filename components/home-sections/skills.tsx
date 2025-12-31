@@ -4,25 +4,8 @@ import React from 'react'
 import { Badge } from '@/components/badge'
 import { AnimatedText } from '@/components/animated-text'
 import {
-    Code,
-    Database,
-    FileJs,
-    FilePy,
-    Atom,
-    Hexagon,
-    GithubLogo,
-    Cloud,
-    Package,
-    GitBranch,
-    BracketsAngle,
-    Stack,
-    InfinityIcon,
-    LeafIcon,
-    FishIcon,
-    FileSqlIcon,
-    AmazonLogoIcon,
+    DatabaseIcon,
     CodeIcon,
-    FileRsIcon,
 } from '@phosphor-icons/react'
 import {
     motion,
@@ -31,29 +14,7 @@ import {
     useAnimationFrame,
 } from 'motion/react'
 import { cn } from '@/lib/utils'
-
-const CORE_SKILLS = [
-    { name: 'Rust', icon: FileRsIcon },
-    { name: 'Python', icon: FilePy },
-    { name: 'Elixir', icon: Stack },
-    { name: 'Javascript', icon: FileJs },
-    { name: 'Django', icon: Code },
-    { name: 'PHP', icon: Code },
-    { name: 'React.JS', icon: Atom },
-    { name: 'Node.JS', icon: Hexagon },
-    { name: 'Next.JS', icon: Code },
-    { name: 'Typescript', icon: FileJs },
-]
-
-const INFRA_SKILLS = [
-    { name: 'PostgreSQL', icon: FileSqlIcon },
-    { name: 'MySQL', icon: FishIcon },
-    { name: 'MongoDB', icon: LeafIcon },
-    { name: 'AWS', icon: AmazonLogoIcon },
-    { name: 'Docker', icon: Package },
-    { name: 'CI/CD pipelines', icon: InfinityIcon },
-    { name: 'GIT', icon: GitBranch },
-]
+import { CORE_SKILLS, INFRA_SKILLS } from '@/lib/data'
 
 export function SkillsSection() {
     return (
@@ -97,7 +58,7 @@ export function SkillsSection() {
                         <div className="flex flex-col gap-6 px-7 pt-7">
                             <div className="flex flex-col gap-4">
                                 <div className="text-badge-dot">
-                                    <Database size={30} weight="duotone" />
+                                    <DatabaseIcon size={30} weight="duotone" />
                                 </div>
                                 <h3 className="text-xl font-bold tracking-tight text-black">
                                     Databases & Infrastructure
