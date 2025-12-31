@@ -56,7 +56,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${satoshi.variable} ${plusJakartaSans.variable} ${spaceMono.variable} ${acme.variable} ${inter.variable} antialiased`}
+                className={`${satoshi.variable} ${plusJakartaSans.variable} ${spaceMono.variable} ${acme.variable} ${inter.variable} antialiased bg-background`}
             >
                 {children}
                 <BottomBlur />

@@ -1,10 +1,10 @@
 import { Button } from '@/components/button'
 import { Footer } from '@/components/footer'
-import { Review } from '@/components/review'
+import { TestimonialsSection } from '@/components/home-sections/testimonials'
 
 export default function Home() {
     return (
-        <div className="flex flex-col font-sans">
+        <div className="flex flex-col font-sansxw">
             {/* Demo Section from before */}
             <main className="mx-auto flex w-full max-w-4xl flex-col gap-12 p-8 pt-32">
                 <section className="flex flex-col gap-4">
@@ -40,18 +40,11 @@ export default function Home() {
             {/* Scroll Test Sections */}
             <div className="h-screen w-full bg-slate-100 flex items-center justify-center">
                 <h1 className="text-4xl font-bold text-slate-300">
-                    Scroll Down for CTA
+                    Scroll Down for Testimonials
                 </h1>
             </div>
 
-            <div className="h-screen w-full bg-zinc-50 flex flex-col items-center justify-center">
-                <h1 className="text-4xl font-bold text-zinc-200">
-                    Keep Scrolling for Footer
-                </h1>
-                <div className="max-w-xl">
-                    <Review quote="Working with Obed was a remarkable experience. His innovative thinking and brilliance brought about a user-friendly and and reliable wallet to life. I was really impressed by his professionalism and dedication to building something that makes crypto simpler for everybody." />
-                </div>
-            </div>
+            <TestimonialsSection />
 
             {/* New Components */}
             <Footer />
