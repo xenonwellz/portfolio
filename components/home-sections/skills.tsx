@@ -22,6 +22,7 @@ import {
     FileSqlIcon,
     AmazonLogoIcon,
     CodeIcon,
+    FileRsIcon,
 } from '@phosphor-icons/react'
 import {
     motion,
@@ -32,7 +33,7 @@ import {
 import { cn } from '@/lib/utils'
 
 const CORE_SKILLS = [
-    { name: 'Rust', icon: Code },
+    { name: 'Rust', icon: FileRsIcon },
     { name: 'Python', icon: FilePy },
     { name: 'Elixir', icon: Stack },
     { name: 'Javascript', icon: FileJs },
@@ -70,9 +71,9 @@ export function SkillsSection() {
                 </div>
 
                 {/* Content Cards */}
-                <div className="flex flex-col gap-8 lg:gap-10">
+                <div className="flex flex-col sm:flex-row gap-8 lg:gap-10">
                     {/* Core Skills Container */}
-                    <div className="bg-white rounded-xl border border-black/5 card-shadow overflow-hidden flex flex-col">
+                    <div className="bg-white rounded-xl border border-black/5 card-shadow overflow-hidden flex flex-col flex-1">
                         <div className="flex flex-col gap-6 px-7 pt-7">
                             <div className="flex flex-col gap-4">
                                 <div className="text-badge-dot">
@@ -92,7 +93,7 @@ export function SkillsSection() {
                     </div>
 
                     {/* Infra Skills Container */}
-                    <div className="bg-white rounded-xl border border-black/5 card-shadow overflow-hidden flex flex-col">
+                    <div className="bg-white rounded-xl border border-black/5 card-shadow overflow-hidden flex flex-col flex-1">
                         <div className="flex flex-col gap-6 px-7 pt-7">
                             <div className="flex flex-col gap-4">
                                 <div className="text-badge-dot">

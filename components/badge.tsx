@@ -28,14 +28,27 @@ export interface BadgeProps
     dotColor?: string
 }
 
-function Badge({ className, variant, dot, children, ...props }: BadgeProps) {
+function Badge({
+    className,
+    variant,
+    dot,
+    dotColor,
+    children,
+    ...props
+}: BadgeProps) {
     return (
         <div className={cn(badgeVariants({ variant }), className)} {...props}>
             {dot && (
-                <div className="rounded-full border-2 border-badge-dot">
+                <div
+                    className={cn(
+                        'rounded-full border-2',
+                        dotColor ? 'border-current' : 'border-badge-dot',
+                    )}
+                >
                     <div
                         className={cn(
-                            'rounded-full border-2 border-white bg-badge-dot size-2',
+                            'rounded-full border-2 border-white size-2',
+                            dotColor || 'bg-badge-dot',
                         )}
                     />
                 </div>
