@@ -21,7 +21,7 @@ const REVIEWS = [
 
 export function TestimonialsSection() {
     return (
-        <section className="w-full py-20 lg:py-32">
+        <section className="w-full py-20 lg:pt-32 pb-24">
             <div className="mx-auto max-w-6xl px-6 lg:px-10">
                 <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start">
                     <div className="flex flex-col gap-10 lg:sticky lg:top-[122px]">
