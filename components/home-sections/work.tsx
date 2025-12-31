@@ -12,7 +12,10 @@ import { PROJECTS } from '@/lib/data'
 
 export function WorkSection() {
     return (
-        <section id="work" className="w-full section-padding py-20 lg:py-32 bg-background rounded-t-[48px] border-t border-x">
+        <section
+            id="work"
+            className="w-full section-padding py-20 lg:py-32 bg-background rounded-t-[48px] border-t border-x"
+        >
             <div className="flex flex-col gap-12">
                 {/* Header */}
                 <div className="flex flex-col gap-8">

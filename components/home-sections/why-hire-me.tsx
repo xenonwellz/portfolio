@@ -10,7 +10,10 @@ import { FEATURES } from '@/lib/data'
 
 export function WhyHireMeSection() {
     return (
-        <section id="why" className="w-full section-padding rounded-t-[48px] border-t border-x bg-background-secondary py-20 lg:pt-32 pb-24">
+        <section
+            id="why"
+            className="w-full section-padding rounded-t-[48px] border-t border-x bg-background-secondary py-20 lg:pt-32 pb-24"
+        >
             <div>
                 <div className="flex flex-col gap-10 md:gap-3">
                     <div className="flex flex-col gap-10 lg:sticky lg:top-[122px] text-center">

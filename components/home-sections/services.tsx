@@ -12,7 +12,10 @@ import { SERVICES } from '@/lib/data'
 
 export function ServicesSection() {
     return (
-        <section id="services" className="w-full section-padding py-20 lg:py-32 bg-background rounded-t-[48px] border-t border-x">
+        <section
+            id="services"
+            className="w-full section-padding py-20 lg:py-32 bg-background rounded-t-[48px] border-t border-x"
+        >
             <div className="flex flex-col gap-12">
                 {/* Header */}
                 <div>

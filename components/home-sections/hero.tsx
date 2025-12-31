@@ -95,7 +95,7 @@ export function HeroSection() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1, duration: 0.8 }}
                     >
-                        <Link 
+                        <Link
                             href="#about"
                             className="flex flex-col items-center gap-2 group transition-opacity hover:opacity-100 opacity-60"
                         >
@@ -104,7 +104,7 @@ export function HeroSection() {
                                 transition={{
                                     duration: 2,
                                     repeat: Infinity,
-                                    ease: "easeInOut"
+                                    ease: 'easeInOut',
                                 }}
                             >
                                 <CaretDownIcon size={24} weight="bold" />
