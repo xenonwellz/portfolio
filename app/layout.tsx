@@ -42,8 +42,67 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-    title: 'Portfolio',
-    description: 'My professional portfolio',
+    title: {
+        default: 'Obed Ovabor | Software Engineer & Architect',
+        template: '%s | Obed Ovabor',
+    },
+    description:
+        'Software Engineer and Architect specializing in high-performance systems, blockchain, and full-stack development with Rust, TS/JS, Python, and Elixir.',
+    keywords: [
+        'Obed Ovabor',
+        'Software Engineer',
+        'Architect',
+        'Rust',
+        'TypeScript',
+        'Python',
+        'Elixir',
+        'Blockchain',
+        'Full-Stack',
+        'Portfolio',
+    ],
+    authors: [{ name: 'Obed Ovabor' }],
+    creator: 'Obed Ovabor',
+    openGraph: {
+        type: 'website',
+        locale: 'en_US',
+        url: 'https://obedovabor.com',
+        title: 'Obed Ovabor | Software Engineer & Architect',
+        description:
+            'Software Engineer & Architect building the future of software with Rust, TS/JS, Python, and Elixir.',
+        siteName: 'Obed Ovabor Portfolio',
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'Obed Ovabor Portfolio',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Obed Ovabor | Software Engineer & Architect',
+        description:
+            'Software Engineer & Architect building the future of software with Rust, TS/JS, Python, and Elixir.',
+        images: ['/og-image.png'],
+        creator: '@obedovabor',
+    },
+    icons: {
+        icon: '/favicon.ico',
+        shortcut: '/favicon.ico',
+        apple: '/apple-icon.png',
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
 }
 
 import { BottomBlur } from '@/components/footer/bottom-blur'
