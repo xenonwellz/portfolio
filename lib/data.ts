@@ -30,9 +30,9 @@ export const HERO_CONTENT = {
 }
 
 export const NAV_LINKS = [
+    { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'My Work', href: '#work' },
-    { name: 'About', href: '#about' },
 ]
 
 export const SOCIAL_LINKS = [

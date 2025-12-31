@@ -14,7 +14,7 @@ const buttonVariants = cva(
                 primary: 'text-white',
                 secondary:
                     'text-black border border-[#0000001a] bg-origin-border',
-                tertiary: 'text-[rgba(0,0,0,0.6)]',
+                tertiary: 'text-[rgba(0,0,0,0.6)] border border-transparent',
             },
             animation: {
                 none: '',
@@ -87,11 +87,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                         'linear-gradient(rgb(247, 247, 247) -74%, rgba(0, 0, 0, 0.1) 183%)',
                     boxShadow:
                         'rgba(0, 0, 0, 0.68) 0px -0.48175px 0.48175px -1.25px inset, rgba(0, 0, 0, 0.6) 0px -1.83083px 1.83083px -2.5px inset, rgba(0, 0, 0, 0.24) 0px -8px 8px -3.75px inset',
+                    borderColor: 'rgba(0, 0, 0, 0)',
                     opacity: 1,
                 },
                 hover: {
                     boxShadow:
                         'rgba(0, 0, 0, 0.88) 0px -0.48175px 0.48175px -1.66667px inset, rgba(0, 0, 0, 0.72) 0px -1.83083px 1.83083px -3.33333px inset, rgba(0, 0, 0, 0) 0px -8px 8px -5px inset',
+                    borderColor: 'var(--border)',
                     opacity: 0.8,
                 },
             },
@@ -131,7 +133,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                         hover: innerHoverAnimation,
                     }}
                     transition={{ duration: 0.1, ease: 'easeOut' }}
-                    className="inline-block relative z-10 leading-8"
+                    className="inline-block relative z-10 leading-8 w-full"
                 >
                     {children}
                 </motion.span>

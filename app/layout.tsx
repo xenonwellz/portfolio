@@ -47,6 +47,7 @@ export const metadata: Metadata = {
 }
 
 import { BottomBlur } from '@/components/footer/bottom-blur'
+import { Navbar } from '@/components/navbar'
 
 export default function RootLayout({
     children,
@@ -58,6 +59,7 @@ export default function RootLayout({
             <body
                 className={`${satoshi.variable} ${plusJakartaSans.variable} ${spaceMono.variable} ${acme.variable} ${inter.variable} antialiased bg-background`}
             >
+                <Navbar />
                 {children}
                 <BottomBlur />
             </body>

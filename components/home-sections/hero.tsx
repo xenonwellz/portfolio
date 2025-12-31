@@ -12,7 +12,7 @@ import { Badge } from '../badge'
 
 export function HeroSection() {
     return (
-        <section className="relative w-full flex items-center pt-[160px] pb-10 px-10 border-x overflow-hidden bg-background">
+        <section className="relative section-padding w-full flex items-center pt-[160px] pb-10 px-10 border-x overflow-hidden bg-background">
             {/* Animated Backgrounds */}
             <div className="absolute inset-0 z-0">
                 <LightRays />
