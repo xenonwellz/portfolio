@@ -2,7 +2,11 @@
 
 import { motion, useScroll, useTransform } from 'motion/react'
 import { useRef } from 'react'
-import { XLogoIcon, LinkedinLogoIcon, GithubLogoIcon } from '@phosphor-icons/react'
+import {
+    XLogoIcon,
+    LinkedinLogoIcon,
+    GithubLogoIcon,
+} from '@phosphor-icons/react'
 import Link from 'next/link'
 
 export function MainFooter() {
@@ -18,9 +22,9 @@ export function MainFooter() {
         <motion.footer
             ref={containerRef}
             style={{ y }}
-            className="w-full bg-background-tertiary px-8 py-25"
+            className="w-full bg-background-tertiary px-10 py-25"
         >
-            <div className="mx-auto max-w-6xl px-6">
+            <div className="xl:mx-auto xl:max-w-6xl xl:px-6">
                 <div className="flex flex-col gap-15">
                     <div className="flex items-center justify-between">
                         <h3 className="text-2xl font-bold tracking-tight text-zinc-900">
@@ -37,36 +41,36 @@ export function MainFooter() {
                                     href={href}
                                     className="flex h-10 w-10 items-center justify-center rounded-full bg-background"
                                 >
-                                    <Icon
-                                        size={24}
-                                    />
+                                    <Icon size={24} />
                                 </Link>
                             ))}
                         </div>
                     </div>
 
-                    <div className="flex flex-wrap gap-8 font-medium h-8 items-center">
+                    <div className="flex flex-wrap gap-8 font-medium h-8 items-center text-black/60">
                         <Link
                             href="#"
-                            className="transition-colors hover:text-black"
+                            className="transition-colors duration-500 hover:text-black"
                         >
                             Skills
                         </Link>
                         <Link
                             href="#"
-                            className="transition-colors hover:text-black"
+                            className="transition-colors duration-500 hover:text-black"
                         >
                             My Work
                         </Link>
                         <Link
                             href="#"
-                            className="transition-colors hover:text-black"
+                            className="transition-colors duration-500 hover:text-black"
                         >
                             About
                         </Link>
                     </div>
 
-                    <div className="flex font-medium h-8 items-center">© 2025 Obed</div>
+                    <div className="flex font-medium h-8 items-center text-black/60">
+                        © 2025 Obed
+                    </div>
                 </div>
             </div>
         </motion.footer>

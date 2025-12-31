@@ -130,10 +130,10 @@
     }
 
     body {
-        @apply bg-background text-foreground font-sans overscroll-auto;
+        @apply bg-background text-foreground font-sans overscroll-none;
     }
 
     html {
-        @apply overscroll-auto;
+        @apply overscroll-none;
     }
 }

@@ -35,6 +35,8 @@ export const metadata: Metadata = {
     description: 'My professional portfolio',
 }
 
+import { BottomBlur } from '@/components/footer/bottom-blur'
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -46,6 +48,7 @@ export default function RootLayout({
                 className={`${satoshi.variable} ${plusJakartaSans.variable} ${spaceMono.variable} antialiased`}
             >
                 {children}
+                <BottomBlur />
             </body>
         </html>
     )
