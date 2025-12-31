@@ -38,7 +38,6 @@ export function CTASection() {
 
                         <Button
                             variant="primary"
-                            animation="translate"
                             className="w-fit"
                         >
                             Get In Touch

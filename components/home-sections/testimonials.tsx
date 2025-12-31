@@ -24,7 +24,7 @@ export function TestimonialsSection() {
         <section className="w-full py-20 lg:py-32">
             <div className="mx-auto max-w-6xl px-6 lg:px-10">
                 <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start">
-                    <div className="flex flex-col gap-10 lg:sticky lg:top-32">
+                    <div className="flex flex-col gap-10 lg:sticky lg:top-[122px]">
                         <div className="flex flex-col gap-8">
                             <Badge dot className="self-start">
                                 Testimonials
@@ -64,7 +64,15 @@ export function TestimonialsSection() {
 
                     <div className="flex flex-col gap-6 lg:pt-12">
                         {REVIEWS.map((review, index) => (
-                            <Review key={index} quote={review.quote} />
+                            <div
+                                key={index}
+                                className="sticky"
+                                style={{
+                                    top: `${122 + index * 24}px`,
+                                }}
+                            >
+                                <Review quote={review.quote} />
+                            </div>
                         ))}
                     </div>
                 </div>
