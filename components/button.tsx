@@ -133,7 +133,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                         hover: innerHoverAnimation,
                     }}
                     transition={{ duration: 0.1, ease: 'easeOut' }}
-                    className="inline-block relative z-10 leading-8 w-full"
+                    className="inline-block relative z-10 leading-8"
                 >
                     {children}
                 </motion.span>

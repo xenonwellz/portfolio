@@ -11,12 +11,29 @@ import { cn } from '@/lib/utils'
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
+    const [activeSection, setActiveSection] = useState('hero')
 
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 20)
         }
-        return () => window.removeEventListener('scroll', handleScroll)
+
+        const handleSectionChange = (e: any) => {
+            setActiveSection(e.detail)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        window.addEventListener('sectionChange', handleSectionChange)
+
+        // Set initial active section from hash
+        if (window.location.hash) {
+            setActiveSection(window.location.hash.slice(1))
+        }
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+            window.removeEventListener('sectionChange', handleSectionChange)
+        }
     }, [])
 
     return (
@@ -39,11 +56,11 @@ export function Navbar() {
                     <div className="flex items-center justify-between px-6 xl:pr-1.5">
                         <Link
                             href="/"
+                            onClick={() => setActiveSection('hero')}
                             className="text-xl font-bold tracking-tight text-black uppercase shrink-0"
                         >
                             Obed
                         </Link>
-
                         {/* Desktop Menu */}
                         <div className="hidden xl:flex items-center gap-8">
                             <div className="flex items-center gap-8 mr-4">
@@ -51,7 +68,12 @@ export function Navbar() {
                                     <Link
                                         key={link.name}
                                         href={link.href}
-                                        className="text-[15px] font-medium text-black/60 hover:text-black transition-colors"
+                                        className={cn(
+                                            'text-[15px] font-medium transition-colors',
+                                            activeSection === link.href.slice(1)
+                                                ? 'text-black'
+                                                : 'text-black/60 hover:text-black',
+                                        )}
                                     >
                                         {link.name}
                                     </Link>

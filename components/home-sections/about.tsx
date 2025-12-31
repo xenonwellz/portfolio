@@ -76,7 +76,7 @@ function ProfileCard() {
                 <div className="h-px w-full bg-[#0000000d]" />
 
                 {/* Buttons */}
-                <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-3">
                     <Button variant="primary" animation="text">
                         Download Resume
                     </Button>
@@ -85,7 +85,7 @@ function ProfileCard() {
                         animation="translate-small"
                         href="#contact"
                     >
-                        <span className="flex items-center gap-2">
+                        <span className="flex flex-1 items-center justify-center gap-2">
                             <EnvelopeSimpleIcon size={20} weight="duotone" />
                             Get in Touch
                         </span>

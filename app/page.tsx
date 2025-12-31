@@ -16,7 +16,9 @@ export default function Home() {
             <WorkSection />
             <ServicesSection />
             <WhyHireMeSection />
-            <TestimonialsSection />
+            <div id="testimonials">
+                <TestimonialsSection />
+            </div>
 
             {/* New Components */}
             <Footer />
