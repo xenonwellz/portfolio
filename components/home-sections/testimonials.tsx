@@ -24,7 +24,7 @@ export function TestimonialsSection() {
     return (
         <section className="w-full py-20 rounded-t-[48px] border-t border-x p-10 lg:pt-32 pb-24 bg-background">
             <div className="mx-auto max-w-6xl px-6 lg:px-10">
-                <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start">
+                <div className="grid grid-cols-1 gap-10 xl:gap-16 lg:grid-cols-2 lg:items-start">
                     <div className="flex flex-col gap-10 lg:sticky lg:top-[122px]">
                         <div className="flex flex-col gap-8">
                             <Badge dot className="self-start">
@@ -32,7 +32,7 @@ export function TestimonialsSection() {
                             </Badge>
 
                             <h2 className="text-[48px] lg:text-[54px] font-satoshi leading-[1.05] tracking-tight text-black/60">
-                                <AnimatedText text="Kind words from previous" />{' '}
+                                <AnimatedText text="Kind words from previous " />
                                 <span className="text-black">
                                     <AnimatedText
                                         text="Clients and Employers"
@@ -69,7 +69,7 @@ export function TestimonialsSection() {
                         {REVIEWS.map((review, index) => (
                             <div
                                 key={index}
-                                className="sticky"
+                                className="xl:sticky"
                                 style={{
                                     top: `${122 + index * 24}px`,
                                 }}

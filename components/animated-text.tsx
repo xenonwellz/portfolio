@@ -56,7 +56,7 @@ export function AnimatedText({
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className={cn('inline-flex flex-wrap gap-x-[0.25em]', className)}
+            className={cn('', className)}
         >
             {words.map((word, index) => (
                 <motion.span
@@ -65,6 +65,7 @@ export function AnimatedText({
                     className="inline-block"
                 >
                     {word}
+                    {index !== words.length - 1 && '\u00a0'}
                 </motion.span>
             ))}
         </motion.span>
