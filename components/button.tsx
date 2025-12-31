@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
 const buttonVariants = cva(
-    'inline-flex font-semibold items-center justify-center whitespace-nowrap rounded-full text-sm transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-6.5 py-3.5 text-base relative overflow-hidden cursor-pointer',
+    'inline-flex font-semibold items-center justify-center whitespace-nowrap rounded-full text-sm transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-6.5 py-3.5 text-base relative overflow-hidden cursor-pointer text-sm sm:text-base',
     {
         variants: {
             variant: {
