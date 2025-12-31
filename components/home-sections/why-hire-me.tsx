@@ -39,7 +39,7 @@ export function WhyHireMeSection() {
                         <div className="flex flex-col gap-6 items-center">
                             <Badge dot>Why choose me</Badge>
 
-                            <h2 className="text-[40px] md:text-[48px] lg:text-[54px] font-satoshi leading-[1.05] tracking-tight text-black">
+                            <h2 className="section-header-text text-black">
                                 <AnimatedText text="Why You Should" />{' '}
                                 <span className="text-black/60">
                                     <AnimatedText text="Hire Me" delay={0.5} />

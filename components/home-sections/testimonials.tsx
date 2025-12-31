@@ -31,7 +31,7 @@ export function TestimonialsSection() {
                                 Testimonials
                             </Badge>
 
-                            <h2 className="text-[48px] xl:text-[54px] font-satoshi leading-[1.05] tracking-tight text-black/60">
+                            <h2 className="section-header-text text-black/60">
                                 <AnimatedText text="Kind words from previous " />
                                 <span className="text-black">
                                     <AnimatedText

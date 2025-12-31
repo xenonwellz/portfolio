@@ -16,7 +16,7 @@ export function CTASection() {
                                     Get in Touch
                                 </Badge>
 
-                                <h2 className="text-[44px] xl:text-[52px] tracking-tight text-black font-satoshi leading-12 xl:leading-14">
+                                <h2 className="section-header-text text-black">
                                     <AnimatedText text="Let's Work" />{' '}
                                     <span className="text-black/60">
                                         <AnimatedText

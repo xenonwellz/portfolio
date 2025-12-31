@@ -53,7 +53,7 @@ const SERVICES = [
 
 export function ServicesSection() {
     return (
-        <section className="w-full section-padding py-20 lg:py-32 bg-white">
+        <section className="w-full section-padding py-20 lg:py-32 bg-background rounded-t-[48px] border-t border-x">
             <div className="flex flex-col gap-12">
                 {/* Header */}
                 <div>
@@ -61,7 +61,7 @@ export function ServicesSection() {
                 </div>
                 <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8">
                     <div className="flex flex-col gap-6">
-                        <h2 className="text-[40px] md:text-[54px] lg:text-[64px] font-satoshi leading-[1.05] tracking-tight text-black">
+                        <h2 className="section-header-text text-black">
                             <AnimatedText text="My" />{' '}
                             <span className="text-black/60">
                                 <AnimatedText text="Services" delay={0.2} />
@@ -89,14 +89,14 @@ export function ServicesSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Column 1: Full-Stack (Large) + System Architecture (Small) */}
                     <div className="flex flex-col gap-6">
-                        <ServiceCard service={SERVICES[0]} />
-                        <ServiceCard service={SERVICES[2]} />
+                        <ServiceCard service={SERVICES[0]} side="left" />
+                        <ServiceCard service={SERVICES[2]} side="left" />
                     </div>
 
                     {/* Column 2: Blockchain (Small) + Technical Leadership (Large) */}
                     <div className="flex flex-col gap-6">
-                        <ServiceCard service={SERVICES[1]} />
-                        <ServiceCard service={SERVICES[3]} />
+                        <ServiceCard service={SERVICES[1]} side="right" />
+                        <ServiceCard service={SERVICES[3]} side="right" />
                     </div>
                 </div>
             </div>
@@ -104,17 +104,24 @@ export function ServicesSection() {
     )
 }
 
-function ServiceCard({ service }: { service: (typeof SERVICES)[0] }) {
+function ServiceCard({ 
+    service, 
+    side 
+}: { 
+    service: (typeof SERVICES)[0], 
+    side: 'left' | 'right' 
+}) {
     const Icon = service.icon
+    const isLeft = side === 'left'
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: isLeft ? -40 : 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.215, 0.61, 0.355, 1] }}
+            transition={{ duration: 1, ease: [0.215, 0.61, 0.355, 1] }}
             className={cn(
-                'bg-[#fafafa] rounded-3xl p-8 lg:p-10 flex flex-col gap-6 border border-black/5 ring-1 ring-black/2',
+                'bg-[#fafafa] rounded-3xl p-6 lg:p-8 flex flex-col gap-6 border border-black/5 ring-1 ring-black/2',
             )}
         >
             <div className="flex flex-col gap-6 h-full">
