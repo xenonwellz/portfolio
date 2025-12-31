@@ -77,7 +77,7 @@ export function WhyHireMeSection() {
                                                     </div>
                                                 </div>
 
-                                                <div className="bg-black/10 pointer-events-none h-px lg:w-px last:hidden" />
+                                                <div className="bg-black/10 pointer-events-none h-px lg:h-auto lg:w-px last:hidden" />
                                             </React.Fragment>
                                         ))}
                                     </div>

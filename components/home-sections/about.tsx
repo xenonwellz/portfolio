@@ -20,17 +20,10 @@ export function AboutSection() {
             <div className="flex flex-col items-center gap-16">
                 {/* Section Header */}
                 <div className="flex flex-col items-center gap-8 text-center">
-                    <Badge
-                        dot
-                        className="bg-white border border-[#0000001a] py-1.5 px-4 shadow-none"
-                    >
-                        About Me
-                    </Badge>
+                    <Badge dot>About Me</Badge>
                     <h2 className="section-header-text tracking-tight text-black leading-relaxed">
                         <span>Your</span>{' '}
-                        <span className="text-black/50">
-                            Software Engineer
-                        </span>
+                        <span className="text-black/50">Software Engineer</span>
                     </h2>
                 </div>
 
@@ -84,15 +77,9 @@ function ProfileCard() {
                     <Button variant="primary" animation="text">
                         Download Resume
                     </Button>
-                    <Button
-                        variant="secondary"
-                        animation="translate-small"
-                    >
+                    <Button variant="secondary" animation="translate-small">
                         <span className="flex items-center gap-2">
-                            <EnvelopeIcon
-                                size={20}
-                                weight="duotone"
-                            />
+                            <EnvelopeIcon size={20} weight="duotone" />
                             Get in Touch
                         </span>
                     </Button>
@@ -146,26 +133,23 @@ function BioAndExperienceCard() {
             {/* About Content */}
             <div className="flex flex-col gap-8 text-black/70 leading-relaxed tracking-tight font-medium font-plus-jakarta">
                 <p>
-                    “I believe a true software engineer should be
-                    able to build anything, anywhere, across any
-                    system. I don’t limit myself to labels like
-                    frontend or backend — to me, they’re just
-                    perspectives. What matters is how everything
-                    connects and works together.”
+                    “I believe a true software engineer should be able to build
+                    anything, anywhere, across any system. I don’t limit myself
+                    to labels like frontend or backend — to me, they’re just
+                    perspectives. What matters is how everything connects and
+                    works together.”
                 </p>
                 <p>
-                    I’ve built solutions across blockchain, web, and
-                    enterprise systems using Rust, JavaScript,
-                    TypeScript, Python, PHP, and Elixir. My guiding
-                    principle is always to choose the right tool for
-                    the task — delivering efficient, reliable, and
+                    I’ve built solutions across blockchain, web, and enterprise
+                    systems using Rust, JavaScript, TypeScript, Python, PHP, and
+                    Elixir. My guiding principle is always to choose the right
+                    tool for the task — delivering efficient, reliable, and
                     purposeful software.
                 </p>
                 <p className="hidden md:block">
-                    Outside of code, I’m curious about how
-                    technology transforms industries and I enjoy
-                    mentoring younger developers stepping into
-                    tech.”
+                    Outside of code, I’m curious about how technology transforms
+                    industries and I enjoy mentoring younger developers stepping
+                    into tech.”
                 </p>
             </div>
 
@@ -173,9 +157,7 @@ function BioAndExperienceCard() {
 
             {/* Experience List */}
             <div className="flex flex-col gap-5">
-                <h3 className="text-xl font-bold text-black">
-                    Experience
-                </h3>
+                <h3 className="text-xl font-bold text-black">Experience</h3>
 
                 <div className="flex flex-col gap-4">
                     {EXPERIENCES.map((exp, index) => (
@@ -187,11 +169,16 @@ function BioAndExperienceCard() {
     )
 }
 
-function ExperienceItem({ company, role, duration, logo }: { 
-    company: string, 
-    role: string, 
-    duration: string, 
-    logo: string 
+function ExperienceItem({
+    company,
+    role,
+    duration,
+    logo,
+}: {
+    company: string
+    role: string
+    duration: string
+    logo: string
 }) {
     return (
         <div className="flex items-center justify-between p-2 bg-background-secondary rounded-lg border border-black/5">

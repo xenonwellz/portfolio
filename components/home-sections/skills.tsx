@@ -3,10 +3,7 @@
 import React from 'react'
 import { Badge } from '@/components/badge'
 import { AnimatedText } from '@/components/animated-text'
-import {
-    DatabaseIcon,
-    CodeIcon,
-} from '@phosphor-icons/react'
+import { DatabaseIcon, CodeIcon } from '@phosphor-icons/react'
 import {
     motion,
     useMotionValue,
