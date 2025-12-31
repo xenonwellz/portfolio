@@ -10,7 +10,7 @@ import { AnimatedText } from '@/components/animated-text'
 
 export function HeroSection() {
     return (
-        <section className="relative w-full min-h-[80vh] flex items-center section-padding border-x overflow-hidden bg-background">
+        <section className="relative w-full flex items-center pt-[160px] pb-10 px-10 border-x overflow-hidden bg-background">
             {/* Animated Backgrounds */}
             <div className="absolute inset-0 z-0">
                 <LightRays />
@@ -24,21 +24,28 @@ export function HeroSection() {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: [0.215, 0.61, 0.355, 1] }}
+                        transition={{
+                            duration: 0.8,
+                            ease: [0.215, 0.61, 0.355, 1],
+                        }}
                     >
                         <span className="text-black/60 font-medium tracking-wider uppercase text-sm">
                             {HERO_CONTENT.subtitle}
                         </span>
                     </motion.div>
-                    
+
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-black leading-[0.9]">
                         <AnimatedText text={HERO_CONTENT.title} />
                     </h1>
-                    
-                    <motion.p 
+
+                    <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4, ease: [0.215, 0.61, 0.355, 1] }}
+                        transition={{
+                            duration: 0.8,
+                            delay: 0.4,
+                            ease: [0.215, 0.61, 0.355, 1],
+                        }}
                         className="text-lg md:text-xl text-black/60 font-medium max-w-xl leading-relaxed"
                     >
                         {HERO_CONTENT.description}
@@ -48,13 +55,25 @@ export function HeroSection() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6, ease: [0.215, 0.61, 0.355, 1] }}
+                    transition={{
+                        duration: 0.8,
+                        delay: 0.6,
+                        ease: [0.215, 0.61, 0.355, 1],
+                    }}
                     className="flex flex-wrap gap-4"
                 >
-                    <Button variant="primary" animation="translate" href="#work">
+                    <Button
+                        variant="primary"
+                        animation="translate"
+                        href="#work"
+                    >
                         View Projects
                     </Button>
-                    <Button variant="secondary" animation="translate-small" href="#about">
+                    <Button
+                        variant="secondary"
+                        animation="translate-small"
+                        href="#about"
+                    >
                         More About Me
                     </Button>
                 </motion.div>
