@@ -1,4 +1,5 @@
 'use client'
+import React from 'react'
 
 import { Badge } from '@/components/badge'
 import { AnimatedText } from '@/components/animated-text'
@@ -31,8 +32,8 @@ const FEATURES = [
 
 export function WhyHireMeSection() {
     return (
-        <section className="w-full rounded-t-[48px] border-t border-x py-20 lg:pt-32 pb-24 bg-background-secondary">
-            <div className="mx-auto max-w-6xl px-4.5 sm:px-10">
+        <section className="w-full section-padding rounded-t-[48px] border-t border-x bg-background-secondary py-20 lg:pt-32 pb-24">
+            <div>
                 <div className="flex flex-col gap-10 md:gap-3">
                     <div className="flex flex-col gap-10 lg:sticky lg:top-[122px] text-center">
                         <div className="flex flex-col gap-6 items-center">
@@ -73,9 +74,8 @@ export function WhyHireMeSection() {
                                             startIndex,
                                             startIndex + 2,
                                         ).map((feature, i) => (
-                                            <>
+                                            <React.Fragment key={i}>
                                                 <div
-                                                    key={i}
                                                     className={cn(
                                                         'flex flex-1 flex-col gap-7.5 relative',
                                                     )}
@@ -100,7 +100,7 @@ export function WhyHireMeSection() {
                                                 </div>
 
                                                 <div className="bg-black/10 pointer-events-none h-px lg:w-px last:hidden" />
-                                            </>
+                                            </React.Fragment>
                                         ))}
                                     </div>
                                 </motion.div>

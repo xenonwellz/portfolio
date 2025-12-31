@@ -22,8 +22,8 @@ const REVIEWS = [
 
 export function TestimonialsSection() {
     return (
-        <section className="w-full py-20 rounded-t-[48px] border-t border-x px-4.5 xl:px-10 xl:pt-32 pb-24 bg-background">
-            <div className="mx-auto max-w-6xl px-0 xl:px-10">
+        <section className="w-full section-padding rounded-t-[48px] border-t border-x bg-background py-20 pb-24 xl:pt-32">
+            <div>
                 <div className="grid grid-cols-1 gap-10 xl:gap-16 xl:grid-cols-2 xl:items-start">
                     <div className="flex flex-col gap-10 xl:sticky xl:top-[122px]">
                         <div className="flex flex-col gap-8">

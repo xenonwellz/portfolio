@@ -22,9 +22,9 @@ export function MainFooter() {
         <motion.footer
             ref={containerRef}
             style={{ y }}
-            className="w-full bg-background-tertiary px-10 py-25"
+            className="w-full section-padding border-x bg-background-tertiary py-25"
         >
-            <div className="xl:mx-auto xl:max-w-6xl xl:px-6">
+            <div>
                 <div className="flex flex-col gap-15">
                     <div className="flex items-center justify-between">
                         <h3 className="text-2xl font-bold tracking-tight text-black">
