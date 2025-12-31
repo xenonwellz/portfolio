@@ -90,16 +90,20 @@ export function WorkSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Column 1: Left positioned cards */}
                     <div className="flex flex-col gap-6">
-                        {PROJECTS.filter((p) => p.side === 'left').map((project) => (
-                            <WorkCard key={project.id} project={project} />
-                        ))}
+                        {PROJECTS.filter((p) => p.side === 'left').map(
+                            (project) => (
+                                <WorkCard key={project.id} project={project} />
+                            ),
+                        )}
                     </div>
 
                     {/* Column 2: Right positioned cards */}
                     <div className="flex flex-col gap-6">
-                        {PROJECTS.filter((p) => p.side === 'right').map((project) => (
-                            <WorkCard key={project.id} project={project} />
-                        ))}
+                        {PROJECTS.filter((p) => p.side === 'right').map(
+                            (project) => (
+                                <WorkCard key={project.id} project={project} />
+                            ),
+                        )}
                     </div>
                 </div>
             </div>
@@ -115,12 +119,12 @@ function WorkCard({ project }: { project: (typeof PROJECTS)[0] }) {
             initial={{ opacity: 0, x: isLeft ? -40 : 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-10% 0px -10% 0px' }}
-            transition={{ 
-                duration: 1, 
+            transition={{
+                duration: 1,
                 ease: [0.215, 0.61, 0.355, 1],
                 // On small screens, we might want a different animation, but x offset is fine as long as we don't overflow
             }}
-            className="bg-[#fafafa] rounded-3xl p-4 border group flex flex-col gap-4"
+            className="bg-[#fafafa] rounded-3xl p-4 border border-black/5 group flex flex-col gap-4 card-shadow"
         >
             <div className="relative rounded-lg overflow-hidden">
                 <img
@@ -134,7 +138,7 @@ function WorkCard({ project }: { project: (typeof PROJECTS)[0] }) {
                 <h3 className="text-xl lg:text-2xl font-bold tracking-tight text-black leading-tight">
                     {project.title}
                 </h3>
-                
+
                 {project.hasButton && (
                     <Button
                         variant="primary"
@@ -142,9 +146,9 @@ function WorkCard({ project }: { project: (typeof PROJECTS)[0] }) {
                         href={project.link}
                         className="gap-2 flex py-2.5 px-6"
                     >
-                        <span className='flex items-center gap-2'>
+                        <span className="flex items-center gap-2">
                             <LinkSimpleIcon size={16} weight="bold" />
-                        View Live
+                            View Live
                         </span>
                     </Button>
                 )}

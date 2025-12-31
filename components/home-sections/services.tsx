@@ -104,12 +104,12 @@ export function ServicesSection() {
     )
 }
 
-function ServiceCard({ 
-    service, 
-    side 
-}: { 
-    service: (typeof SERVICES)[0], 
-    side: 'left' | 'right' 
+function ServiceCard({
+    service,
+    side,
+}: {
+    service: (typeof SERVICES)[0]
+    side: 'left' | 'right'
 }) {
     const Icon = service.icon
     const isLeft = side === 'left'
@@ -121,7 +121,7 @@ function ServiceCard({
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.215, 0.61, 0.355, 1] }}
             className={cn(
-                'bg-[#fafafa] rounded-3xl p-6 lg:p-8 flex flex-col gap-6 border border-black/5 ring-1 ring-black/2',
+                'bg-[#fafafa] rounded-3xl p-6 lg:p-8 flex flex-col gap-6 border border-black/5 ring-1 ring-black/2 card-shadow',
             )}
         >
             <div className="flex flex-col gap-6 h-full">
