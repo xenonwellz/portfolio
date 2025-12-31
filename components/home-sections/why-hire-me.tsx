@@ -31,14 +31,14 @@ const FEATURES = [
 
 export function WhyHireMeSection() {
     return (
-        <section className="w-full py-20 rounded-t-[48px] border-t border-x p-10 lg:pt-32 pb-24 bg-background-secondary">
-            <div className="mx-auto max-w-6xl px-6 lg:px-10">
-                <div className="flex flex-col gap-3">
+        <section className="w-full rounded-t-[48px] border-t border-x py-20 lg:pt-32 pb-24 bg-background-secondary">
+            <div className="mx-auto max-w-6xl px-4.5 sm:px-10">
+                <div className="flex flex-col gap-10 md:gap-3">
                     <div className="flex flex-col gap-10 lg:sticky lg:top-[122px] text-center">
                         <div className="flex flex-col gap-6 items-center">
                             <Badge dot>Why choose me</Badge>
 
-                            <h2 className="text-[48px] lg:text-[54px] font-satoshi leading-[1.05] tracking-tight text-black">
+                            <h2 className="text-[40px] md:text-[48px] lg:text-[54px] font-satoshi leading-[1.05] tracking-tight text-black">
                                 <AnimatedText text="Why You Should" />{' '}
                                 <span className="text-black/60">
                                     <AnimatedText text="Hire Me" delay={0.5} />
@@ -67,7 +67,7 @@ export function WhyHireMeSection() {
                                             'rgba(92, 92, 92, 0.08) 0px 2px 0px 0px inset',
                                     }}
                                 >
-                                    <div className="flex gap-12.5">
+                                    <div className="flex gap-12.5 flex-col md:flex-row">
                                         {/* First card in pairish layout */}
                                         {FEATURES.slice(
                                             startIndex,
@@ -99,7 +99,7 @@ export function WhyHireMeSection() {
                                                     </div>
                                                 </div>
 
-                                                <div className="bg-black/10 pointer-events-none w-px last:hidden" />
+                                                <div className="bg-black/10 pointer-events-none h-px lg:w-px last:hidden" />
                                             </>
                                         ))}
                                     </div>

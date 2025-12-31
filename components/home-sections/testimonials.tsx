@@ -22,16 +22,16 @@ const REVIEWS = [
 
 export function TestimonialsSection() {
     return (
-        <section className="w-full py-20 rounded-t-[48px] border-t border-x p-10 lg:pt-32 pb-24 bg-background">
-            <div className="mx-auto max-w-6xl px-6 lg:px-10">
-                <div className="grid grid-cols-1 gap-10 xl:gap-16 lg:grid-cols-2 lg:items-start">
-                    <div className="flex flex-col gap-10 lg:sticky lg:top-[122px]">
+        <section className="w-full py-20 rounded-t-[48px] border-t border-x px-4.5 xl:px-10 xl:pt-32 pb-24 bg-background">
+            <div className="mx-auto max-w-6xl px-0 xl:px-10">
+                <div className="grid grid-cols-1 gap-10 xl:gap-16 xl:grid-cols-2 xl:items-start">
+                    <div className="flex flex-col gap-10 xl:sticky xl:top-[122px]">
                         <div className="flex flex-col gap-8">
                             <Badge dot className="self-start">
                                 Testimonials
                             </Badge>
 
-                            <h2 className="text-[48px] lg:text-[54px] font-satoshi leading-[1.05] tracking-tight text-black/60">
+                            <h2 className="text-[48px] xl:text-[54px] font-satoshi leading-[1.05] tracking-tight text-black/60">
                                 <AnimatedText text="Kind words from previous " />
                                 <span className="text-black">
                                     <AnimatedText
@@ -65,7 +65,7 @@ export function TestimonialsSection() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-6 lg:pt-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-6 xl:pt-12">
                         {REVIEWS.map((review, index) => (
                             <div
                                 key={index}
