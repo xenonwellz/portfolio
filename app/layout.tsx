@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Plus_Jakarta_Sans, Space_Mono } from 'next/font/google'
+import { Plus_Jakarta_Sans, Space_Mono, Acme, Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 
@@ -30,6 +30,17 @@ const spaceMono = Space_Mono({
     weight: ['400', '700'],
 })
 
+const acme = Acme({
+    variable: '--font-acme',
+    subsets: ['latin'],
+    weight: ['400'],
+})
+
+const inter = Inter({
+    variable: '--font-inter',
+    subsets: ['latin'],
+})
+
 export const metadata: Metadata = {
     title: 'Portfolio',
     description: 'My professional portfolio',
@@ -45,7 +56,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${satoshi.variable} ${plusJakartaSans.variable} ${spaceMono.variable} antialiased`}
+                className={`${satoshi.variable} ${plusJakartaSans.variable} ${spaceMono.variable} ${acme.variable} ${inter.variable} antialiased`}
             >
                 {children}
                 <BottomBlur />
