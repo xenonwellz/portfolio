@@ -27,7 +27,7 @@ export function MainFooter() {
             <div className="xl:mx-auto xl:max-w-6xl xl:px-6">
                 <div className="flex flex-col gap-15">
                     <div className="flex items-center justify-between">
-                        <h3 className="text-2xl font-bold tracking-tight text-zinc-900">
+                        <h3 className="text-2xl font-bold tracking-tight text-black">
                             OBED
                         </h3>
                         <div className="flex gap-4">

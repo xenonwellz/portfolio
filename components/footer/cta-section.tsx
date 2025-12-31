@@ -3,6 +3,7 @@
 import { Button } from '@/components/button'
 import { Badge } from '@/components/badge'
 import { motion } from 'motion/react'
+import { AnimatedText } from '@/components/animated-text'
 
 export function CTASection() {
     return (
@@ -15,9 +16,11 @@ export function CTASection() {
                                 Get in Touch
                             </Badge>
 
-                            <h2 className="text-[44px] xl:text-[52px] tracking-tight text-zinc-900 font-satoshi leading-12 xl:leading-14">
-                                Let's Work{' '}
-                                <span className="text-black/60">Together</span>
+                            <h2 className="text-[44px] xl:text-[52px] tracking-tight text-black font-satoshi leading-12 xl:leading-14">
+                                <AnimatedText text="Let's Work" />{' '}
+                                <span className="text-black/60">
+                                    <AnimatedText text="Together" delay={0.4} />
+                                </span>
                             </h2>
                         </div>
 
@@ -36,12 +39,24 @@ export function CTASection() {
                             ))}
                         </div>
 
-                        <Button
-                            variant="primary"
-                            className="w-fit"
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                                delay: 0.4,
+                                duration: 0.5,
+                                ease: 'easeOut',
+                            }}
                         >
-                            Get In Touch
-                        </Button>
+                            <Button
+                                variant="primary"
+                                animation="translate"
+                                className="w-fit"
+                            >
+                                Get In Touch
+                            </Button>
+                        </motion.div>
                     </div>
 
                     <div className="relative overflow-hidden rounded-3xl bg-white p-5 shadow-xl aspect-5/3 max-w-[720px]">

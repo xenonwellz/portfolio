@@ -3,6 +3,7 @@
 import { Button } from '@/components/button'
 import { Badge } from '@/components/badge'
 import { Review } from '@/components/review'
+import { AnimatedText } from '@/components/animated-text'
 
 const REVIEWS = [
     {
@@ -21,7 +22,7 @@ const REVIEWS = [
 
 export function TestimonialsSection() {
     return (
-        <section className="w-full py-20 lg:pt-32 pb-24">
+        <section className="w-full py-20 rounded-t-[48px] border-t border-x p-10 lg:pt-32 pb-24 bg-background">
             <div className="mx-auto max-w-6xl px-6 lg:px-10">
                 <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start">
                     <div className="flex flex-col gap-10 lg:sticky lg:top-[122px]">
@@ -31,10 +32,12 @@ export function TestimonialsSection() {
                             </Badge>
 
                             <h2 className="text-[48px] lg:text-[54px] font-satoshi leading-[1.05] tracking-tight text-black/60">
-                                Kind words from
-                                previous{' '}
+                                <AnimatedText text="Kind words from previous" />{' '}
                                 <span className="text-black">
-                                    Clients and Employers
+                                    <AnimatedText
+                                        text="Clients and Employers"
+                                        delay={0.5}
+                                    />
                                 </span>
                             </h2>
                         </div>

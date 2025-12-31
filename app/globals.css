@@ -20,6 +20,7 @@
     --color-sidebar-primary: var(--sidebar-primary);
     --color-sidebar-foreground: var(--sidebar-foreground);
     --color-badge-dot: var(--badge-dot);
+    --color-success: var(--success);
     --color-sidebar: var(--sidebar);
     --color-chart-5: var(--chart-5);
     --color-chart-4: var(--chart-4);
@@ -53,16 +54,17 @@
 
 :root {
     --radius: 0.625rem;
-    --background: oklch(97.614% 0.00011 271.152);
     /* rgb(247, 247, 247) */
-    --background-secondary: oklch(97.015% 0.00011 271.152);
+    --background: oklch(97.614% 0.00011 271.152);
     /* rgb(245, 245, 245) */
-    --background-tertiary: oklch(95.213% 0.00011 271.152);
+    --background-secondary: oklch(97.015% 0.00011 271.152);
     /* rgb(239, 239, 239) */
+    --background-tertiary: oklch(95.213% 0.00011 271.152);
     --foreground: oklch(0.145 0 0);
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.145 0 0);
     --badge-dot: oklch(47.362% 0.29868 264.223);
+    --success: oklch(51.976% 0.17685 142.511);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.145 0 0);
     --primary: oklch(0.205 0 0);
