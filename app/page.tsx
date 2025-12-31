@@ -4,6 +4,7 @@ import { TestimonialsSection } from '@/components/home-sections/testimonials'
 import { ServicesSection } from '@/components/home-sections/services'
 import { WorkSection } from '@/components/home-sections/work'
 import { WhyHireMeSection } from '@/components/home-sections/why-hire-me'
+import { SkillsSection } from '@/components/home-sections/skills'
 
 export default function Home() {
     return (
@@ -40,13 +41,7 @@ export default function Home() {
                 </section>
             </main>
 
-            {/* Scroll Test Sections */}
-            <div className="h-screen w-full bg-slate-100 flex items-center justify-center">
-                <h1 className="text-4xl font-bold text-slate-300">
-                    Scroll Down for Content
-                </h1>
-            </div>
-
+            <SkillsSection />
             <WorkSection />
             <ServicesSection />
             <WhyHireMeSection />

@@ -124,7 +124,7 @@ function WorkCard({ project }: { project: (typeof PROJECTS)[0] }) {
                 ease: [0.215, 0.61, 0.355, 1],
                 // On small screens, we might want a different animation, but x offset is fine as long as we don't overflow
             }}
-            className="bg-[#fafafa] rounded-3xl p-4 border border-black/5 group flex flex-col gap-4 card-shadow"
+            className="bg-card rounded-3xl p-4 border border-black/5 group flex flex-col gap-4 card-shadow"
         >
             <div className="relative rounded-lg overflow-hidden">
                 <img

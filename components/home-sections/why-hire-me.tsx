@@ -62,7 +62,7 @@ export function WhyHireMeSection() {
                                         duration: 0.8,
                                         ease: [0.215, 0.61, 0.355, 1],
                                     }}
-                                    className="bg-[#fafafa] rounded-2xl p-10"
+                                    className="bg-card rounded-2xl p-10"
                                     style={{
                                         boxShadow:
                                             'rgba(92, 92, 92, 0.08) 0px 2px 0px 0px inset',
