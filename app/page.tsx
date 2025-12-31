@@ -1,5 +1,4 @@
 import { Button } from '@/components/button'
-import { CTASection } from '@/components/cta-section'
 import { Footer } from '@/components/footer'
 
 export default function Home() {
@@ -51,7 +50,6 @@ export default function Home() {
             </div>
 
             {/* New Components */}
-            <CTASection />
             <Footer />
         </div>
     )

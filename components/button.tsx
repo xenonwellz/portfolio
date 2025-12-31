@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
 const buttonVariants = cva(
-    'inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-8 py-4 text-base relative overflow-hidden cursor-pointer',
+    'inline-flex font-semibold items-center justify-center whitespace-nowrap rounded-full text-sm transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-6.5 py-3.5 text-base relative overflow-hidden cursor-pointer',
     {
         variants: {
             variant: {
@@ -131,7 +131,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                         hover: innerHoverAnimation,
                     }}
                     transition={{ duration: 0.1, ease: 'easeOut' }}
-                    className="inline-block relative z-10"
+                    className="inline-block relative z-10 leading-8"
                 >
                     {children}
                 </motion.span>
