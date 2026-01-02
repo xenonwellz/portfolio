@@ -8,7 +8,7 @@ import { LinkSimpleIcon } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
-import { PROJECTS } from '@/lib/data'
+import { PROJECTS, CONTACT } from '@/lib/data'
 
 export function WorkSection() {
     return (
@@ -35,7 +35,7 @@ export function WorkSection() {
                             <Button
                                 variant="primary"
                                 animation="translate"
-                                href="#contact"
+                                href={`mailto:${CONTACT.email}`}
                             >
                                 Get in touch
                             </Button>

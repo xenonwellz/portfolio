@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     openGraph: {
         type: 'website',
         locale: 'en_US',
-        url: 'https://obedovabor.com',
+        url: 'https://obedovabor.me',
         title: 'Obed Ovabor | Software Engineer & Architect',
         description:
             'Software Engineer & Architect building the future of software with Rust, TS/JS, Python, and Elixir.',

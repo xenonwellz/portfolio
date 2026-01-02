@@ -29,6 +29,11 @@ export const HERO_CONTENT = {
         'Crafting high-performance architectures and decentralized systems using Rust, TS/JS, Python, and Elixir.',
 }
 
+export const CONTACT = {
+    email: 'hello@obedovabor.me',
+    resume: '/files/Obed Ovabor Resume.pdf',
+}
+
 export const NAV_LINKS = [
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
@@ -43,10 +48,10 @@ export const SOCIAL_LINKS = [
 
 export const IMAGES = {
     experience: {
-        xenrad: '/images/experience/xenrad.png',
-        agroease: '/images/experience/agroease.png',
-        bful: '/images/experience/bful.png',
-        flyte: '/images/experience/flyte.png',
+        xenrad: '/images/experience/xenrad.avif',
+        agroease: '/images/experience/agroease.avif',
+        bful: '/images/experience/bful.avif',
+        flyte: '/images/experience/flyte.avif',
     },
     projects: {
         agroease: '/images/projects/agroease.avif',
@@ -57,13 +62,14 @@ export const IMAGES = {
         misas: '/images/projects/misas.avif',
     },
     services: {
-        fullStack: '/images/full-stack.png',
+        work: '/images/work.avif',
         leadership: [
-            '/images/leadership-1.png',
-            '/images/leadership-2.png',
-            '/images/leadership-3.png',
+            '/images/leadership/1.avif',
+            '/images/leadership/2.avif',
+            '/images/leadership/3.avif',
         ],
     },
+    user: '/images/me.avif',
 }
 
 export const EXPERIENCES = [
@@ -171,7 +177,7 @@ export const SERVICES = [
         description:
             'I build scalable, user-friendly applications from frontend to backend.',
         icon: BrowserIcon,
-        image: IMAGES.services.fullStack,
+        image: IMAGES.services.work,
         className: 'md:col-span-1 md:row-span-2',
     },
     {

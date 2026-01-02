@@ -122,7 +122,7 @@ const Marquee = ({
                 {duplicatedSkills.map((skill, index) => (
                     <div
                         key={index}
-                        className="flex shrink-0 items-center gap-3 rounded-full border bg-background px-6 py-4"
+                        className="flex shrink-0 items-center gap-3 rounded-full border bg-background px-6 py-3"
                     >
                         <skill.icon
                             size={20}

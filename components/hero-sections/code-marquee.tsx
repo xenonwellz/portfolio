@@ -11,7 +11,7 @@ import Image from 'next/image'
 
 const CODE_IMAGES = Array.from(
     { length: 10 },
-    (_, i) => `/images/code/${i + 1}.png`,
+    (_, i) => `/images/code/${i + 1}.avif`,
 )
 
 export function CodeMarquee() {

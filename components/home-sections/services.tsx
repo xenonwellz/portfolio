@@ -8,7 +8,7 @@ import { motion } from 'motion/react'
 import Image from 'next/image'
 import { InfiniteCarousel } from '@/components/infinite-carousel'
 import { cn } from '@/lib/utils'
-import { SERVICES } from '@/lib/data'
+import { SERVICES, CONTACT } from '@/lib/data'
 
 export function ServicesSection() {
     return (
@@ -40,7 +40,7 @@ export function ServicesSection() {
                         <Button
                             variant="primary"
                             animation="translate"
-                            href="#contact"
+                            href={`mailto:${CONTACT.email}`}
                         >
                             Get In Touch
                         </Button>

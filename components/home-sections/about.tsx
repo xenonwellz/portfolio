@@ -12,7 +12,7 @@ import {
 import { motion } from 'motion/react'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
-import { EXPERIENCES, SOCIAL_LINKS } from '@/lib/data'
+import { EXPERIENCES, SOCIAL_LINKS, IMAGES, CONTACT } from '@/lib/data'
 
 export function AboutSection() {
     return (
@@ -54,7 +54,11 @@ function ProfileCard() {
         >
             {/* Profile Image Container */}
             <div className="relative aspect-square w-full rounded overflow-hidden bg-gray-100 border border-black/5">
-                <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/5 opacity-50" />
+                <img
+                    src={IMAGES.user}
+                    alt="Obed Ovabor"
+                    className="w-full h-full object-cover"
+                />
             </div>
 
             {/* Profile Info */}
@@ -77,13 +81,18 @@ function ProfileCard() {
 
                 {/* Buttons */}
                 <div className="grid grid-cols-2 gap-3">
-                    <Button variant="primary" animation="text">
+                    <Button
+                        variant="primary"
+                        animation="text"
+                        href={CONTACT.resume}
+                        download="Obed_Ovabor_Resume.pdf"
+                    >
                         Download Resume
                     </Button>
                     <Button
                         variant="secondary"
                         animation="translate-small"
-                        href="#contact"
+                        href={`mailto:${CONTACT.email}`}
                     >
                         <span className="flex flex-1 items-center justify-center gap-2">
                             <EnvelopeSimpleIcon size={20} weight="duotone" />
@@ -160,7 +169,7 @@ function BioAndExperienceCard() {
                 </p>
             </div>
 
-            <div className="h-px w-full bg-[#0000000d]" />
+            <div className="h-px w-full bg-[rgba(0,0,0,0.05)]" />
 
             {/* Experience List */}
             <div className="flex flex-col gap-5">

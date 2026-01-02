@@ -13,7 +13,7 @@ const buttonVariants = cva(
             variant: {
                 primary: 'text-white',
                 secondary:
-                    'text-black border border-[#0000001a] bg-origin-border',
+                    'text-black border border-black/10 bg-origin-border',
                 tertiary: 'text-[rgba(0,0,0,0.6)] border border-transparent',
             },
             animation: {
@@ -35,11 +35,14 @@ export interface ButtonProps
         Omit<HTMLMotionProps<'button'>, 'children'>,
         VariantProps<typeof buttonVariants> {
     href?: string
+    download?: string
+    target?: string
+    rel?: string
     children?: React.ReactNode
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-    ({ className, variant, animation, href, children, ...props }, ref) => {
+    ({ className, variant, animation, href, download, target, rel, children, ...props }, ref) => {
         const Comp = href ? motion(Link) : motion.button
 
         // Outer animation (translation)
@@ -105,6 +108,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             <Comp
                 ref={ref as any}
                 href={href as any}
+                download={download}
+                target={target}
+                rel={rel}
                 className={cn(
                     buttonVariants({ variant, animation }),
                     className,

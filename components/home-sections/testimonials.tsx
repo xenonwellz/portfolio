@@ -4,7 +4,7 @@ import { Button } from '@/components/button'
 import { Badge } from '@/components/badge'
 import { Review } from '@/components/review'
 import { AnimatedText } from '@/components/animated-text'
-import { REVIEWS } from '@/lib/data'
+import { REVIEWS, CONTACT } from '@/lib/data'
 
 export function TestimonialsSection() {
     return (
@@ -47,7 +47,7 @@ export function TestimonialsSection() {
                                         variant="primary"
                                         animation="translate-small"
                                         className="h-14 px-8 text-base"
-                                        href="#contact"
+                                        href={`mailto:${CONTACT.email}`}
                                     >
                                         Get In Touch
                                     </Button>

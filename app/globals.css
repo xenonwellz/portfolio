@@ -140,7 +140,7 @@
     }
 
     html {
-        @apply overscroll-none;
+        @apply overscroll-none text-[14px] sm:text-[16px];
         scroll-behavior: smooth;
     }
 }
@@ -166,7 +166,7 @@
     }
 
     .section-header-text {
-        @apply text-2xl sm:text-[40px] md:text-[48px] 2xl:text-[54px] leading-[1.05] tracking-tight max-w-2xl;
+        @apply text-3xl font-semibold sm:font-normal sm:text-[40px] md:text-[48px] 2xl:text-[54px] leading-[1.05] tracking-tight max-w-2xl;
     }
 
     .card-shadow {
