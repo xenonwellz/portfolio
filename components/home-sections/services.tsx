@@ -14,7 +14,7 @@ export function ServicesSection() {
     return (
         <section
             id="services"
-            className="w-full section-padding py-20 lg:py-32 bg-background rounded-t-[48px] border-t border-x"
+            className="w-full section-padding py-20 lg:py-32 bg-background rounded-t-[48px] border-t border-x overflow-x-hidden"
         >
             <div className="flex flex-col gap-12">
                 {/* Header */}

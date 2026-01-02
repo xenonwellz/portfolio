@@ -1,4 +1,5 @@
 import React from 'react'
+import { IMAGES } from '@/lib/data'
 
 interface ReviewProps {
     quote?: string
@@ -30,7 +31,7 @@ export function Review({
             >
                 <div className="border border-black/10 absolute top-0 left-0 w-[calc(100%-2px)] h-[calc(100%-2px)] rounded-2xl">
                     <img
-                        src="/images/review-gradient.jpeg"
+                        src={IMAGES.reviewGradient}
                         alt=""
                         className="h-full w-full object-cover opacity-6 brightness-15 blur-2xl"
                     />

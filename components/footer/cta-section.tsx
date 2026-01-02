@@ -4,6 +4,7 @@ import { Button } from '@/components/button'
 import { Badge } from '@/components/badge'
 import { motion } from 'motion/react'
 import { AnimatedText } from '@/components/animated-text'
+import { IMAGES, CONTACT } from '@/lib/data'
 
 export function CTASection() {
     return (
@@ -53,6 +54,7 @@ export function CTASection() {
                                 variant="primary"
                                 animation="translate"
                                 className="w-fit"
+                                href={`mailto:${CONTACT.email}`}
                             >
                                 Get In Touch
                             </Button>
@@ -62,7 +64,7 @@ export function CTASection() {
                     <div className="relative rounded-3xl bg-white p-5 shadow-xl aspect-5/3 max-w-[720px]">
                         <div className="relative h-full w-full overflow-hidden rounded-sm">
                             <img
-                                src="/images/dev-screen.jpeg"
+                                src={IMAGES.devScreen}
                                 alt="Coding setup"
                                 className="h-full w-full object-cover"
                             />

@@ -70,6 +70,8 @@ export const IMAGES = {
         ],
     },
     user: '/images/me.avif',
+    devScreen: '/images/dev-screen.avif',
+    reviewGradient: '/images/review-gradient.avif',
 }
 
 export const EXPERIENCES = [

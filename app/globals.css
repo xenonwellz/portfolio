@@ -136,11 +136,11 @@
     }
 
     body {
-        @apply bg-background text-foreground font-sans overscroll-none;
+        @apply bg-background text-foreground font-sans;
     }
 
     html {
-        @apply overscroll-none text-[14px] sm:text-[16px];
+        @apply text-[14px] sm:text-[16px];
         scroll-behavior: smooth;
     }
 }
@@ -155,13 +155,14 @@
         @apply px-4.5 sm:px-10;
     }
 
-    .section-padding>div {
+    .section-padding > div {
         max-width: 1100px;
         margin-inline: auto;
     }
 
     .max-section-width {
         max-width: 1100px;
+        overflow-x: hidden;
         margin-inline: auto;
     }
 
