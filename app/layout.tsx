@@ -42,6 +42,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://obedovabor.me'),
     title: {
         default: 'Obed Ovabor | Software Engineer & Architect',
         template: '%s | Obed Ovabor',
@@ -84,8 +85,8 @@ export const metadata: Metadata = {
         title: 'Obed Ovabor | Software Engineer & Architect',
         description:
             'Software Engineer & Architect building the future of software with Rust, TS/JS, Python, and Elixir.',
-        images: ['/og-image.png'],
-        creator: '@obedovabor',
+        images: ['/twitter-image.png'],
+        creator: '@xenonwellz',
     },
     icons: {
         icon: '/favicon.ico',
