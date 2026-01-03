@@ -24,9 +24,9 @@ import {
 
 export const HERO_CONTENT = {
     title: 'Obed Ovabor',
-    subtitle: 'Building the future of software, one line at a time.',
+    subtitle: 'Architecting scalable systems and decentralized solutions.',
     description:
-        'Crafting high-performance architectures and decentralized systems using Rust, TS/JS, Python, and Elixir.',
+        'Designing high-performance backend systems and decentralized architectures using Rust, TS/JS, Python, and Elixir.',
 }
 
 export const CONTACT = {
@@ -112,9 +112,9 @@ export const PROJECTS = [
         description:
             'At Agroease, I led mobile development as Deputy CTO where I built an e-commerce app with secure payments, real-time tracking, and offline reliability for farmers.',
         problem:
-            'The agricultural system here is quite challenging, with too many middlemen which often leads to high prices, low farmer profits, and food waste. The system is often not fair and can be quite taxing on everyone involved.',
-        goal: 'The goal of Agroease is to make agriculture simple, profitable and sustainable by linking farmers and buyers directly, providing access to the right people, markets, and support systems that drive food security and economic growth.',
-        result: 'The challenges of the old agricultural system is why Agroease focused on creating a straightforward digital marketplace that directly connects farmers to buyers, helping them sell their harvest quickly and efficiently. I built a more transparent and fair system, ensuring farmers get better prices for their hard work and less food is lost along the way.',
+            'Challenges in the agricultural supply chain often lead to fragmented markets, heavy reliance on middlemen, and significant food waste.',
+        goal: 'To eliminate inefficiencies by connecting farmers directly to buyers, ensuring fair pricing and sustainable food security.',
+        result: 'Built a transparent marketplace that directly connects farmers to consumers, reducing waste and increasing producer profit margins.',
     },
     {
         id: 'smc-dao',
@@ -154,9 +154,9 @@ export const PROJECTS = [
         description:
             'I worked at Xcel Radiology where I designed and implemented microservices using Python Django and PostgreSQL, which ensured efficient and secure handling of medical data.',
         problem:
-            'LanX is designed to help businesses launch powerful, AI-driven websites with ease. This modern SaaS and landing page template blends innovation with sleek design, offering advanced features tailored for AI startups and tech enterprises.',
-        goal: 'The primary goal of LanX is to offer businesses an intuitive and cutting-edge SaaS and landing page template, seamlessly combining advanced features with sleek design. Built for AI startups and tech enterprises.',
-        result: 'In conclusion, LanX is the ultimate solution for AI startups and tech businesses seeking a modern, professional, and feature-rich SaaS and landing page template. With its intuitive design, seamless functionality, and flexibility.',
+            'Traditional radiology workflows often struggle with slow data retrieval and siloed medical records, delaying critical patient care.',
+        goal: 'To modernize imaging management through secure, high-speed microservices and centralized data access.',
+        result: 'Developed a robust system using Python and Django that optimizes medical data handling and improves diagnostic efficiency for healthcare providers.',
     },
     {
         id: 'mmia',
@@ -234,38 +234,38 @@ export const INFRA_SKILLS = [
 
 export const REVIEWS = [
     {
-        quote: 'Working with Obed was a remarkable experience. His innovative thinking and brilliance brought about a user-friendly and and reliable wallet to life. I was really impressed by his professionalism and dedication to building something that makes crypto simpler for everybody .',
+        quote: 'Working with Obed was a remarkable experience. His innovative thinking and brilliance brought about a user-friendly and reliable wallet to life. I was really impressed by his professionalism and dedication to building something that makes crypto simpler for everybody.',
     },
     {
-        quote: "Obed's vision and commitment to community-driven innovation was what really stood out for me. He built something impactful that would definitely stand the test of time and setting a strong standard in the digital economy.",
+        quote: "Obed's vision and commitment to community-driven innovation was what really stood out for me. He built something impactful that will stand the test of time, setting a strong standard in the digital economy.",
     },
     {
-        quote: 'His work with Agroease did not only combine innovation and reliability, but also creativity, genuine purpose and a deep understanding of agricultural needs. Obed built Agroease to not just be an app but a smart solution that empowers farmers and connect communities.',
+        quote: 'His work with Agroease combined innovation with genuine purpose and a deep understanding of agricultural needs. Obed built Agroease to be a smart solution that empowers farmers and connects communities.',
     },
     {
-        quote: 'Working with Obed was such an exceptional experience. His technical expertise and problem-solving skills elevated every project he worked on. He delivered efficient and reliable solutions that strengthened our systems and improved overall performance.',
+        quote: 'Working with Obed was an exceptional experience. His technical expertise and problem-solving skills elevated every project he worked on, delivering efficient and reliable solutions that strengthened our systems.',
     },
 ]
 
 export const FEATURES = [
     {
-        title: 'Versatile Engineer',
+        title: 'Full-Stack Systems Engineer',
         description:
-            'Proficient across blockchain, backend, and frontend stacks — delivering end-to-end solutions.',
+            'Proficient across blockchain, backend, and frontend stacks — delivering comprehensive end-to-end solutions.',
     },
     {
-        title: 'Future-Ready Solutions',
+        title: 'Scalable Architecture',
         description:
-            'I build scalable, modern systems using tools like Rust, Elixir, and cloud-first architectures.',
+            'I build resilient, modern systems using Rust, Elixir, and cloud-native architectures.',
     },
     {
-        title: 'Problem-Solving Mindset',
+        title: 'Pragmatic Problem Solver',
         description:
-            'I focus on solving real problems, choosing the right tool for the job every time.',
+            'I focus on solving real-world challenges by selecting the most effective technologies for each specific project.',
     },
     {
         title: 'Collaborative Leadership',
         description:
-            'Experience as a Founder and Deputy CTO means I align tech execution with business goals.',
+            'Experience as a Founder and Deputy CTO means I align technical execution with overarching business objectives.',
     },
 ]
