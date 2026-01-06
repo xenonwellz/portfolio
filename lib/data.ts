@@ -160,7 +160,7 @@ export const PROJECTS = [
     },
     {
         id: 'mmia',
-        title: 'MMIA staff access control system',
+        title: 'MMIA (FAAN)',
         image: IMAGES.projects.faan,
         side: 'left' as const,
     },
