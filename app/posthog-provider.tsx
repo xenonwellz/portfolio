@@ -12,8 +12,7 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
         if (key) {
             posthog.init(key, {
                 api_host: host,
-                person_profiles: 'identified_only',
-                capture_pageview: false,
+                defaults: '2025-11-30'
             })
         }
     }, [])
