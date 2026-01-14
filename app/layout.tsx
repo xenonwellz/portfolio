@@ -109,6 +109,7 @@ export const metadata: Metadata = {
 import { BottomBlur } from '@/components/footer/bottom-blur'
 import { Navbar } from '@/components/navbar'
 import { SmoothScroll } from '@/components/smooth-scroll'
+import { PostHogProvider } from './posthog-provider'
 
 export default function RootLayout({
     children,
@@ -120,11 +121,13 @@ export default function RootLayout({
             <body
                 className={`${satoshi.variable} ${plusJakartaSans.variable} ${spaceMono.variable} ${acme.variable} ${inter.variable} antialiased bg-background`}
             >
-                <SmoothScroll>
-                    <Navbar />
-                    {children}
-                    <BottomBlur />
-                </SmoothScroll>
+                <PostHogProvider>
+                    <SmoothScroll>
+                        <Navbar />
+                        {children}
+                        <BottomBlur />
+                    </SmoothScroll>
+                </PostHogProvider>
             </body>
         </html>
     )
