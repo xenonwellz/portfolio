@@ -3,14 +3,8 @@
 import React from 'react'
 import { Badge } from '@/components/badge'
 import { Button } from '@/components/button'
-import {
-    GithubLogoIcon,
-    XLogoIcon,
-    LinkedinLogoIcon,
-    EnvelopeSimpleIcon,
-} from '@phosphor-icons/react'
+import { EnvelopeSimpleIcon } from '@phosphor-icons/react'
 import { motion } from 'motion/react'
-import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { EXPERIENCES, SOCIAL_LINKS, IMAGES, CONTACT } from '@/lib/data'
 

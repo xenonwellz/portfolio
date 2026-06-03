@@ -106,10 +106,13 @@ export const metadata: Metadata = {
     },
 }
 
+import Script from 'next/script'
 import { BottomBlur } from '@/components/footer/bottom-blur'
 import { Navbar } from '@/components/navbar'
 import { SmoothScroll } from '@/components/smooth-scroll'
-import { PostHogProvider } from './posthog-provider'
+
+const umamiUrl = process.env.NEXT_PUBLIC_UMAMI_URL
+const umamiWebsiteId = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID
 
 export default function RootLayout({
     children,
@@ -121,13 +124,18 @@ export default function RootLayout({
             <body
                 className={`${satoshi.variable} ${plusJakartaSans.variable} ${spaceMono.variable} ${acme.variable} ${inter.variable} antialiased bg-background`}
             >
-                <PostHogProvider>
-                    <SmoothScroll>
-                        <Navbar />
-                        {children}
-                        <BottomBlur />
-                    </SmoothScroll>
-                </PostHogProvider>
+                {umamiUrl && umamiWebsiteId && (
+                    <Script
+                        src={umamiUrl}
+                        data-website-id={umamiWebsiteId}
+                        strategy="lazyOnload"
+                    />
+                )}
+                <SmoothScroll>
+                    <Navbar />
+                    {children}
+                    <BottomBlur />
+                </SmoothScroll>
             </body>
         </html>
     )

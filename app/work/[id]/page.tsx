@@ -1,22 +1,17 @@
 'use client'
 
 import React from 'react'
-import { useParams, useRouter } from 'next/navigation'
+import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import { motion } from 'motion/react'
-import {
-    ArrowLeftIcon,
-    ArrowUpRightIcon,
-    EnvelopeSimpleIcon,
-} from '@phosphor-icons/react'
-import { PROJECTS, NAV_LINKS } from '@/lib/data'
+import { ArrowLeftIcon, ArrowUpRightIcon } from '@phosphor-icons/react'
+import { PROJECTS } from '@/lib/data'
 import { Button } from '@/components/button'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 
 export default function ProjectPage() {
     const params = useParams()
-    const router = useRouter()
     const id = params?.id as string
     const project = PROJECTS.find((p) => p.id === id)
 

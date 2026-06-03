@@ -10,7 +10,6 @@ import {
     useTransform,
     useAnimationFrame,
 } from 'motion/react'
-import { cn } from '@/lib/utils'
 import { CORE_SKILLS, INFRA_SKILLS } from '@/lib/data'
 
 export function SkillsSection() {
