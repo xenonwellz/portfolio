@@ -47,11 +47,11 @@ function ProfileCard() {
             className="lg:col-span-5 bg-card rounded-xl p-5 sm:p-6 border border-black/5 profile-shadow flex flex-col gap-10 h-fit lg:sticky lg:top-32"
         >
             {/* Profile Image Container */}
-            <div className="relative aspect-square w-full rounded overflow-hidden bg-gray-100 border border-black/5">
+            <div className="relative aspect-4/5 w-full rounded overflow-hidden bg-gray-100 border border-black/5">
                 <img
                     src={IMAGES.user}
                     alt="Obed Ovabor"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-[center_38%]"
                 />
             </div>
 
